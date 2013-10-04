@@ -1,0 +1,83 @@
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ~='cd ~'
+
+# PS
+alias psa="ps aux"
+alias psg="ps aux | grep "
+alias psr='ps aux | grep ruby'
+
+# show me files matching "ls grep"
+alias lsg='ll | grep'
+
+# vim using
+mvim --version > /dev/null 2>&1
+MACVIM_INSTALLED=$?
+if [ $MACVIM_INSTALLED -eq 0 ]; then
+  alias vim="mvim -v"
+fi
+
+# Common shell functions
+alias less='less -r'
+alias tf='tail -f'
+alias l='less'
+alias lh='ls -alt | head' # see the last modified files
+alias screen='TERM=screen screen'
+alias cl='clear'
+
+alias tfdl='tail -f log/development.log'
+alias tftl='tail -f log/test.log'
+
+alias sgi='sudo gem install --no-ri --no-rdoc'
+
+alias todo='open nvalt://find/todo'
+
+# Tmux
+alias mls="tmux ls"
+alias mrs="tmux attach-session -t $*"
+alias msa="tmux $*"
+alias mks="tmux killscreen"
+
+# Tmuxinator
+alias muxl="mux list"
+alias mtmwww='mux tmwww'
+alias mtmadmin='mux tmadmin'
+
+# Folders
+alias sites='cd ~/Sites/'
+alias desk='cd ~/Desktop/'
+alias docs='cd ~/Documents/'
+alias work='cd ~/programming/work/'
+alias gith='cd ~/GitHub/'
+
+# Projects
+alias tmadmin='cd ~/programming/work/tm-apps-dev-box/apps/tm-admin/'
+alias tmadmin2='cd ~/programming/work/tm-apps-dev-box/apps/sandbox/tm-admin/'
+alias tmwww='cd ~/programming/work/tm-apps-dev-box/apps/telemarker/'
+
+# Vargant
+alias vagi='vagrant init'
+alias vagu='vagrant up --provider=vmware_fusion'
+alias va='vagrant up --provider=vmware_fusion --no-provision'
+alias vagh='vagrant halt'
+alias vags='vagrant suspend'
+alias vagr='vagrant resume'
+alias vagrs='vagrant restart'
+alias vagd='vagrant destroy'
+alias vagssh='vagrant ssh'
+alias vagstat='vagrant status'
+alias vagbl='vagrant box list'
+alias vagba='vagrant box add'
+alias vagbd='vagrant box destroy'
+
+alias sshwww='ssh telemarker@telestaging.home'
+alias sshwwwp='ssh telemarker@telemarker.ru'
+
+alias sshadmin='ssh telemarker@admin.telestaging.home'
+alias sshadminp='ssh telemarker@admin.telemarker.home'
+
+# VPN
+alias dev='vpn-connect'
+alias undev='vpn-disconnect'
