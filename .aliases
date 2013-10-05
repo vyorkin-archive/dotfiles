@@ -1,9 +1,9 @@
-alias -g ..='cd ..'
-alias -g ...='cd ../..'
-alias -g ....='cd ../../..'
-alias -g .....='cd ../../../..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
-alias -g ~='cd ~'
+alias ~='cd ~'
 
 alias -g C='|wc -l'
 alias -g H='| head'
