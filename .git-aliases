@@ -20,7 +20,9 @@ alias gcp='git cp'
 
 alias gc
 
-alias ga='git add -A'
+alias ga='git a'
+alias gaa='git aa'
+alias gau='git au'
 
 alias guns='git unstage'
 alias gunc='git uncommit'
