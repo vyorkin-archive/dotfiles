@@ -1,8 +1,23 @@
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ~='cd ~'
+alias -g ..='cd ..'
+alias -g ...='cd ../..'
+alias -g ....='cd ../../..'
+alias -g .....='cd ../../../..'
+
+alias -g ~='cd ~'
+
+alias -g C='|wc -l'
+alias -g H='| head'
+alias -g L='| less'
+alias -g N='| /dev/null'
+alias -g S='| sort'
+alias -g G='| grep'
+
+alias ll='ls -l'
+alias lla='ls -la'
+alias la='ls -a'
+
+# Keys
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> copied'"
 
 # PS
 alias psa="ps aux"
@@ -77,7 +92,3 @@ alias sshwwwp='ssh telemarker@telemarker.ru'
 
 alias sshadmin='ssh telemarker@admin.telestaging.home'
 alias sshadminp='ssh telemarker@admin.telemarker.home'
-
-# VPN
-alias dev='vpn-connect'
-alias undev='vpn-disconnect'
