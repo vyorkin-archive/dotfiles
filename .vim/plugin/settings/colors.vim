@@ -1,10 +1,6 @@
 if !has("gui_macvim")
   set t_Co=256
-  let g:solarized_termcolors=256
 endif
-
-let g:solarized_italic=0
-let g:solarized_bold=0
 
 hi! link txtBold Identifier
 hi! link zshVariableDef Identifier
@@ -48,7 +44,7 @@ hi! link htmlTagName Type
 
 hi! PreProc gui=bold
 
-" Solarized separators are a little garish.
+" Separators are a little garish.
 " This moves separators, comments, and normal
 " text into the same color family as the background.
 " Using the http://drpeterjones.com/colorcalc/,
@@ -69,4 +65,4 @@ hi! EasyMotionTarget guifg=#4CE660 gui=bold
 
 
 " Enforce the colors set here
-au VimEnter * so ~/.vim/plugin/settings/solarized.vim
+au VimEnter * so ~/.vim/plugin/settings/colors.vim
