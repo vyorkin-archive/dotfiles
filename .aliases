@@ -68,9 +68,13 @@ alias work='cd ~/programming/work/'
 alias gith='cd ~/GitHub/'
 
 # Projects
+## Undev
 alias tmadmin='cd ~/programming/work/tm-apps-dev-box/apps/tm-admin/'
 alias tmadmin2='cd ~/programming/work/tm-apps-dev-box/apps/sandbox/tm-admin/'
 alias tmwww='cd ~/programming/work/tm-apps-dev-box/apps/telemarker/'
+## My
+alias dotfiles="cd ~/github/dotfiles"
+
 
 # Vargant
 alias vagi='vagrant init'
