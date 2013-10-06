@@ -90,7 +90,7 @@
   svnd = svn dcommit
   svnl = svn log --oneline --show-commit
 
-	st = !open -a SourceTree .
+  st = !open -a SourceTree .
 [format]
   pretty = format:%C(magenta)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(white)%s %C(red) [%an]%Creset
 [mergetool]
