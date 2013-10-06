@@ -11,7 +11,6 @@ set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
-
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -22,7 +21,7 @@ syntax on
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all 
+" The mapleader has to be set before vundle starts loading all
 " the plugins.
 let mapleader=","
 
@@ -88,14 +87,38 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
+" ================ Colors ===========================
+set t_Co=256
+set background=dark
+colorscheme Tomorrow-Night-Bright
+
+set cursorline
+
+hi! ColorColumn guibg=#121212 ctermbg=233
+hi! CursorLine guibg=#121212 ctermbg=233 cterm=NONE gui=NONE
+hi! CursorColumn guibg=#121212 ctermbg=233 cterm=NONE gui=NONE
+
+if has("gui_running")
+  " Show tab number (useful for Cmd-1, Cmd-2.. mapping)
+  " For some reason this doesn't work as a regular set command,
+  " (the numbers don't show up) so I made it a VimEnter event
+  autocmd VimEnter * set guitablabel=%N:\ %t\ %M
+
+  set lines=60
+  set columns=190
+
+  set guifont=Inconsolata\ XL:h12,Inconsolata:h12,Monaco:h13
+else
+  "dont load csapprox if we no gui support - silences an annoying warning
+  let g:CSApprox_loaded = 1
+endif
+
 " disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set splitbelow
 set splitright
 set wildmode=list:longest,full
-" set cursorline
-" set cursorcolumn
 set guicursor+=n-v-c:blinkon0
 set ttyfast
 set ruler
@@ -122,8 +145,6 @@ set clipboard^=unnamed
 set mouse=a
 set relativenumber
 
-set guifont=Inconsolata:h16
-
 " Resize splits when the window is resized
 au VimResized * :wincmd =
 
@@ -136,13 +157,12 @@ inoremap <F6> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
 
 au FocusLost * :wa
 
-" Ruler 80
-" highlight ColorColumn ctermbg=black guibg=black
-" if exists('+colorcolumn')
-"  set colorcolumn=80
-" else
-"  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-" endif
+" Ruler
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 
 let g:session_autoload = 'no'
 let g:session_autosave = 'no'

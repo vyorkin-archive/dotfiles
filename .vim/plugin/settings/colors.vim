@@ -1,6 +1,3 @@
-if !has("gui_macvim")
-  set t_Co=256
-endif
 
 hi! link txtBold Identifier
 hi! link zshVariableDef Identifier
@@ -51,18 +48,21 @@ hi! PreProc gui=bold
 " they are now just differently saturated and
 " valued riffs on the background color, making
 " everything play together just a little more nicely.
-hi! VertSplit guifg=#003745 cterm=NONE term=NONE ctermfg=NONE ctermbg=NONE
-hi! LineNR guifg=#004C60 gui=bold guibg=#002B36 ctermfg=146
-hi! link NonText VertSplit
-hi! Normal guifg=#77A5B1
-hi! Constant guifg=#00BCE0
-hi! Comment guifg=#52737B
-hi! link htmlLink Include
-hi! CursorLine cterm=NONE gui=NONE
-hi! Visual ctermbg=233
-hi! Type gui=bold
-hi! EasyMotionTarget guifg=#4CE660 gui=bold
+hi! VertSplit guibg=#080808 guifg=#121212 cterm=NONE term=NONE ctermfg=NONE ctermbg=232
 
+"Invisible character colors
+" hi! NonText guifg=#121212 ctermfg=232 ctermbg=232
+" hi! SpecialKey guifg=#121212 ctermfg=232 ctermbg=232
+
+hi! LineNR guifg=#262626 ctermbg=232 gui=bold guibg=#121212 ctermfg=235
+hi! link NonText VertSplit
+hi! Normal guifg=#e4e4e4 ctermfg=254
+hi! Constant guifg=#00df5f ctermfg=41
+hi! Comment guifg=#3A3A3A ctermfg=237
+hi! link htmlLink Include
+hi! Visual ctermbg=233
+hi! EasyMotionTarget guifg=#5fdf00 ctermfg=76 gui=bold cterm=bold
+hi! SignColumn ctermbg=232 ctermfg=29 guibg=#080808 guifg=#00875f
 
 " Enforce the colors set here
 au VimEnter * so ~/.vim/plugin/settings/colors.vim
