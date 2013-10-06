@@ -127,7 +127,7 @@ Bundle "chriskempson/tomorrow-theme"
 Bundle 'flazz/vim-colorschemes'
 
 " Bundle "Valloric/YouCompleteMe"
-Bundle "tomtom/quickfixsigns_vim"
+" Bundle "tomtom/quickfixsigns_vim"
 Bundle "stephenmckinney/vim-solarized-powerline"
 " Bundle "thoughtbot/vim-rspec"
 Bundle "skwp/vim-rspec"
@@ -139,7 +139,7 @@ Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'wikitopian/hardmode'
 Bundle 'jeroenbourgois/vim-actionscript'
-
+Bundle 'guns/xterm-color-table.vim'
 
 "Filetype plugin indent on is required by vundle
 filetype plugin indent on
