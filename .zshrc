@@ -24,6 +24,9 @@ plugins=(ant battery brew bundler capistrano coffee cp gem git github heroku his
 
 source $ZSH/oh-my-zsh.sh
 
+autoload -U promptinit && promptinit
+prompt pure
+
 # Bootstrap
 
 export DOTFILES=$HOME/.dotfiles
