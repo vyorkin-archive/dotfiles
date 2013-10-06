@@ -104,10 +104,12 @@ if has("gui_running")
   " (the numbers don't show up) so I made it a VimEnter event
   autocmd VimEnter * set guitablabel=%N:\ %t\ %M
 
-  set lines=60
-  set columns=190
+  set lines=72
+  set columns=200
 
   set guifont=Inconsolata\ XL:h12,Inconsolata:h12,Monaco:h13
+  set fuopt+=maxhorz
+  set fu
 else
   "dont load csapprox if we no gui support - silences an annoying warning
   let g:CSApprox_loaded = 1
@@ -167,4 +169,3 @@ endif
 let g:session_autoload = 'no'
 let g:session_autosave = 'no'
 
-" set fu
