@@ -39,7 +39,6 @@ Bundle "groenewege/vim-less.git"
 Bundle "itspriddle/vim-jquery.git"
 Bundle "jtratner/vim-flavored-markdown.git"
 Bundle "kchmck/vim-coffee-script"
-Bundle "kogakure/vim-sparkup.git"
 Bundle "nelstrom/vim-markdown-preview"
 Bundle "skwp/vim-html-escape"
 Bundle "slim-template/vim-slim.git"
@@ -117,12 +116,17 @@ Bundle "nelstrom/vim-textobj-rubyblock"
 Bundle "thinca/vim-textobj-function-javascript"
 Bundle "vim-scripts/argtextobj.vim"
 
-" Cosmetics, color scheme, airline...
+" Cosmetics, airline...
 Bundle "chrisbra/color_highlight.git"
 Bundle "bling/vim-airline.git"
 Bundle "vim-scripts/TagHighlight.git"
 
-Bundle "Valloric/YouCompleteMe"
+" Color schemes
+Bundle "endel/vim-github-colorscheme"
+Bundle "chriskempson/tomorrow-theme"
+Bundle 'flazz/vim-colorschemes'
+
+" Bundle "Valloric/YouCompleteMe"
 Bundle "tomtom/quickfixsigns_vim"
 Bundle "stephenmckinney/vim-solarized-powerline"
 " Bundle "thoughtbot/vim-rspec"
