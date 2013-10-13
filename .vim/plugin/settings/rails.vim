@@ -1,8 +1,3 @@
-" Better key maps for switching between controller and view
-nnoremap ,vv :Rview<cr>
-nnoremap ,cc :Rcontroller<cr>
-nnoremap ,mm :Rmodel<cr>
-
 " Rails.vim
 let g:rails_projections = {
       \ "app/repositories/*_repository.rb": {

@@ -7,8 +7,4 @@ let g:ConqueTerm_ReadUnfocused = 1 " update conqueterm buffer while we're not lo
 nmap <silent> <Leader>cc :execute 'ConqueTermSplit bundle exec ./script/console --irb=pry'<CR>
 nmap <silent> <Leader>pp :execute 'ConqueTermSplit pry'<CR>
 
-" Mysql
-nmap <silent> <Leader>mm :execute ':ConqueTermSplit mysql -h localhost -u root --password=telemarker'
-nmap <silent> <Leader>ld :execute ':ConqueTermSplit mysql -h localhost -u root --password=telemarker telemarker_development < sqldump.sql'
-
 let g:ConqueTerm_SendVisKey = '<Leader>e'
