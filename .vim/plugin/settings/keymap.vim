@@ -180,9 +180,9 @@ nnoremap ` '
 " ============================
 " Tabularize - alignment
 " ============================
-" Hit Shift-A then type a character you want to align by
-nmap <S-A> :Tabularize /
-vmap <S-A> :Tabularize /
+" Hit Alt-A then type a character you want to align by
+nmap <Esc>A :Tabularize /
+vmap <Esc>A :Tabularize /
 
 " ============================
 " SplitJoin plugin
