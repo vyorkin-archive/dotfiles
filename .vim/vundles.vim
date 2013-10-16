@@ -76,7 +76,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'mattn/webapi-vim'
 Bundle 'rking/ag.vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic'
 Bundle 'dsummersl/gundo.vim'
 
 Bundle 'skwp/YankRing.vim'
