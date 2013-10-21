@@ -91,8 +91,8 @@ set sidescroll=1
 
 " ================ Colors ===========================
 set t_Co=256
-set background=dark
-colorscheme Tomorrow-Night-Bright
+" set background=dark
+colorscheme Tomorrow
 
 set cursorline
 
