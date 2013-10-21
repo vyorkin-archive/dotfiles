@@ -76,7 +76,6 @@ Bundle 'majutsushi/tagbar'
 Bundle 'mattn/webapi-vim'
 Bundle 'rking/ag.vim'
 Bundle 'scrooloose/nerdtree'
-" Bundle 'scrooloose/syntastic'
 Bundle 'dsummersl/gundo.vim'
 
 Bundle 'skwp/YankRing.vim'
@@ -93,7 +92,6 @@ Bundle 'vim-scripts/AutoTag'
 " Bundle 'vim-scripts/lastpos.vim'
 Bundle 'vim-scripts/sudo.vim'
 " Bundle 'xsunsmile/showmarks'
-Bundle 'terryma/vim-multiple-cursors'
 " Bundle 'xolox/vim-misc'
 " Bundle 'xolox/vim-session'
 
@@ -124,7 +122,7 @@ Bundle 'gregsexton/Gravity'
 Bundle 'gregsexton/Muon'
 Bundle 'gregsexton/Atom'
 
-" Bundle 'tomtom/quickfixsigns_vim'
+ Bundle 'tomtom/quickfixsigns_vim'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
@@ -134,7 +132,12 @@ Bundle 'sunaku/vim-ruby-minitest'
 " Bundle 'rizzatti/dash.vim'
 Bundle 'wikitopian/hardmode'
 Bundle 'jeroenbourgois/vim-actionscript'
-" Bundle 'guns/xterm-color-table.vim'
+Bundle 'guns/xterm-color-table.vim'
+
+Bundle "MarcWeber/vim-addon-async"
+Bundle "MarcWeber/vim-addon-signs"
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "MarcWeber/vim-addon-rdebug"
 
 "Filetype plugin indent on is required by vundle
 filetype plugin indent on
