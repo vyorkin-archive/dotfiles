@@ -1,4 +1,3 @@
-
 hi! link txtBold Identifier
 hi! link zshVariableDef Identifier
 hi! link zshFunction Function
@@ -11,6 +10,7 @@ hi! link rubyStringDelimiter Constant
 hi! link rubyString Constant
 hi! link rubyAccess Todo
 hi! link rubySymbol Identifier
+hi! link rubyConstant Constant
 hi! link rubyPseudoVariable Type
 hi! link rubyRailsARAssociationMethod Title
 hi! link rubyRailsARValidationMethod Title
@@ -39,29 +39,23 @@ hi! link sassDefinition Function
 hi! link sassProperty Type
 hi! link htmlTagName Type
 
-hi! PreProc gui=bold
-
-" Separators are a little garish.
-" This moves separators, comments, and normal
-" text into the same color family as the background.
-" Using the http://drpeterjones.com/colorcalc/,
-" they are now just differently saturated and
-" valued riffs on the background color, making
-" everything play together just a little more nicely.
-hi! VertSplit guibg=#080808 guifg=#1c1c1c cterm=NONE term=NONE ctermfg=234 ctermbg=232
+hi! PreProc guifg=#af87df ctermfg=140 gui=NONE cterm=NONE
 
 "Invisible character colors
-" hi! NonText guifg=#121212 ctermfg=232 ctermbg=232
-" hi! SpecialKey guifg=#121212 ctermfg=232 ctermbg=232
+hi! NonText guifg=#d6d6d6 ctermfg=252 guibg=NONE ctermbg=NONE term=NONE gui=NONE
 
-hi! LineNR guifg=#262626 ctermbg=232 gui=bold guibg=#121212 ctermfg=235
-hi! link NonText VertSplit
-hi! Constant guifg=#00df5f ctermfg=41
-hi! Comment guifg=#3A3A3A ctermfg=237
+hi! CursorLine guibg=#eeeeee ctermbg=255 guifg=NONE ctermfg=NONE
+hi! CursorColumn guibg=#eeeeee ctermbg=255 guifg=NONE ctermfg=NONE
+hi! ColorColumn guibg=#eeeeee ctermbg=255 guifg=NONE ctermfg=NONE
+
+" hi! LineNR guifg=#262626 ctermbg=232 gui=bold guibg=#121212 ctermfg=235
+hi! Constant guifg=#5f87df ctermfg=68
+hi! Comment guifg=#008700 ctermfg=28
 hi! link htmlLink Include
-hi! Visual ctermbg=233
-hi! EasyMotionTarget guifg=#5fdf00 ctermfg=76 gui=bold cterm=bold
-hi! SignColumn ctermbg=232 ctermfg=29 guibg=#080808 guifg=#00875f
+
+" hi! Visual ctermbg=233
+" hi! EasyMotionTarget guifg=#5fdf00 ctermfg=76 gui=bold cterm=bold
+hi! SignColumn ctermbg=NONE guibg=NONE
 
 " Enforce the colors set here
 au VimEnter * so ~/.vim/plugin/settings/colors.vim
