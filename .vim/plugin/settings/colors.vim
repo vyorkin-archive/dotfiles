@@ -63,5 +63,9 @@ hi! Visual ctermbg=233
 hi! EasyMotionTarget guifg=#5fdf00 ctermfg=76 gui=bold cterm=bold
 hi! SignColumn ctermbg=232 ctermfg=29 guibg=#080808 guifg=#00875f
 
+hi! ColorColumn guibg=#1c1c1c ctermbg=234
+hi! CursorLine guibg=#1c1c1c ctermbg=234 cterm=NONE gui=NONE
+hi! CursorColumn guibg=#1c1c1c ctermbg=234 cterm=NONE gui=NONE
+
 " Enforce the colors set here
 au VimEnter * so ~/.vim/plugin/settings/colors.vim

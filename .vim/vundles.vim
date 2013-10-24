@@ -122,7 +122,7 @@ Bundle 'gregsexton/Gravity'
 Bundle 'gregsexton/Muon'
 Bundle 'gregsexton/Atom'
 
- Bundle 'tomtom/quickfixsigns_vim'
+Bundle 'tomtom/quickfixsigns_vim'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
@@ -134,10 +134,10 @@ Bundle 'wikitopian/hardmode'
 Bundle 'jeroenbourgois/vim-actionscript'
 Bundle 'guns/xterm-color-table.vim'
 
-Bundle "MarcWeber/vim-addon-async"
-Bundle "MarcWeber/vim-addon-signs"
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "MarcWeber/vim-addon-rdebug"
+" Bundle "MarcWeber/vim-addon-async"
+" Bundle "MarcWeber/vim-addon-signs"
+" Bundle "MarcWeber/vim-addon-mw-utils"
+" Bundle "MarcWeber/vim-addon-rdebug"
 
 "Filetype plugin indent on is required by vundle
 filetype plugin indent on

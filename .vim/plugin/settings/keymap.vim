@@ -24,12 +24,13 @@ imap <c-l> <space>=><space>
 " Change inside various enclosures with Cmd-" and Cmd-'
 " The f makes it find the enclosure so you don't have
 " to be standing inside it
-nnoremap <Esc>' f'ci'
-nnoremap <Esc>" f"ci"
-nnoremap <Esc>( f(ci(
-nnoremap <Esc>) f)ci)
-nnoremap <Esc>[ f[ci[
-nnoremap <Esc>] f]ci]
+
+nnoremap <D-'> f'ci'
+nnoremap <D-"> f"ci"
+nnoremap <D-(> f(ci(
+nnoremap <D-)> f)ci)
+nnoremap <D-[> f[ci[
+nnoremap <D-]> f]ci]
 
 "Go to last edit location with ,.
 nnoremap ,. '.
@@ -50,22 +51,14 @@ nmap <silent> ,qo :copen<CR>
 
 " move up/down quickly by using Cmd-j, Cmd-k
 " which will move us around by functions
-nnoremap <silent> <S-j> }
-nnoremap <silent> <S-k> {
-autocmd FileType ruby map <buffer> <S-j> ]m
-autocmd FileType ruby map <buffer> <S-k> [m
-autocmd FileType rspec map <buffer> <S-j> }
-autocmd FileType rspec map <buffer> <S-k> {
-autocmd FileType javascript map <buffer> <S-k> }
-autocmd FileType javascript map <buffer> <S-j> {
-
-"GitGrep - open up a git grep line, with a quote started for the search
-nnoremap ,gg :GitGrep ""<left>
-"GitGrep Current Partial
-nnoremap ,gcp :GitGrepCurrentPartial<CR>
-"GitGrep Current File
-nnoremap ,gcf :call GitGrep(expand("%:t:r"))<CR>
-
+nnoremap <silent> <D-j> }
+nnoremap <silent> <D-k> {
+autocmd FileType ruby map <buffer> <D-j> ]m
+autocmd FileType ruby map <buffer> <D-k> [m
+autocmd FileType rspec map <buffer> <D-j> }
+autocmd FileType rspec map <buffer> <D-k> {
+autocmd FileType javascript map <buffer> <D-j> }
+autocmd FileType javascript map <buffer> <D-k> {
 
 "Move back and forth through previous and next buffers
 "with ,z and ,x
@@ -104,10 +97,10 @@ nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
 
 " Resize windows with arrow keys
-nnoremap <S-Up> 2<C-w>+
-nnoremap <S-Down> 2<C-w>-
-nnoremap <S-Left> 2<C-w><
-nnoremap <S-Right> 2<C-w>>
+nnoremap <D-Up> 2<C-w>+
+nnoremap <D-Down> 2<C-w>-
+nnoremap <D-Left> 2<C-w><
+nnoremap <D-Right> 2<C-w>>
 
 " create <%= foo %> erb tags using Ctrl-k in edit mode
 imap <silent> <C-K> <%=   %><Esc>3hi

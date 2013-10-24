@@ -24,7 +24,14 @@ map ,jm :CloseSingleConque<CR>:CtrlP app/models<CR>
 map ,jc :CloseSingleConque<CR>:CtrlP app/controllers<CR>
 map ,jv :CloseSingleConque<CR>:CtrlP app/views<CR>
 map ,jh :CloseSingleConque<CR>:CtrlP app/helpers<CR>
+
+map ,ja :CloseSingleConque<CR>:CtrlP app/assets<CR>
+map ,jaj :CloseSingleConque<CR>:CtrlP app/assets/javascripts<CR>
+map ,jas :CloseSingleConque<CR>:CtrlP app/assets/stylesheets<CR>
+
 map ,jl :CloseSingleConque<CR>:CtrlP lib<CR>
+map ,jt :CloseSingleConque<CR>:CtrlP lib/tasks<CR>
+
 map ,jp :CloseSingleConque<CR>:CtrlP public<CR>
 map ,js :CloseSingleConque<CR>:CtrlP spec<CR>
 map ,jf :CloseSingleConque<CR>:CtrlP fast_spec<CR>
