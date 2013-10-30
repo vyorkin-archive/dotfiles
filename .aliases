@@ -59,12 +59,18 @@ alias mks="tmux killscreen"
 alias muxl="mux list"
 alias mtmwww='mux tmwww'
 alias mtmadmin='mux tmadmin'
+alias mfootball='mux football'
+
+alias mtwitties='mux twitties'
+alias mitsalive='mux itsalive'
 
 # Folders
 alias sites='cd ~/Sites/'
 alias desk='cd ~/Desktop/'
 alias docs='cd ~/Documents/'
 alias work='cd ~/programming/work/'
+alias play='cd ~/programming/play/'
+alias avr='cd ~/programming/play/avr/'
 alias gith='cd ~/GitHub/'
 
 # Projects
@@ -72,6 +78,7 @@ alias gith='cd ~/GitHub/'
 alias tmadmin='cd ~/programming/work/tm-apps-dev-box/apps/tm-admin/'
 alias tmadmin2='cd ~/programming/work/tm-apps-dev-box/apps/sandbox/tm-admin/'
 alias tmwww='cd ~/programming/work/tm-apps-dev-box/apps/telemarker/'
+alias football='cd ~/programming/work/football/apps/football-cc/'
 ## My
 alias dotfiles="cd ~/github/dotfiles"
 
@@ -96,3 +103,5 @@ alias sshwwwp='ssh telemarker@telemarker.ru'
 
 alias sshadmin='ssh telemarker@admin.telestaging.home'
 alias sshadminp='ssh telemarker@admin.telemarker.home'
+
+alias vnoru='ssh 192.168.1.45 -p 2665'

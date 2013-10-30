@@ -14,7 +14,7 @@ alias gsd='git sd'
 alias gsh='git show'
 
 alias gcm='git c'
-alias gc='git ci'
+alias gci='git ci'
 alias gco='git co'
 alias gcp='git cp'
 

@@ -25,6 +25,10 @@ map ,jc :CloseSingleConque<CR>:CtrlP app/controllers<CR>
 map ,jv :CloseSingleConque<CR>:CtrlP app/views<CR>
 map ,jh :CloseSingleConque<CR>:CtrlP app/helpers<CR>
 
+map ,j1 :CloseSingleConque<CR>:CtrlP app/serializers<CR>
+map ,j2 :CloseSingleConque<CR>:CtrlP app/mailers<CR>
+map ,j3 :CloseSingleConque<CR>:CtrlP app/forms<CR>
+
 map ,ja :CloseSingleConque<CR>:CtrlP app/assets<CR>
 map ,jaj :CloseSingleConque<CR>:CtrlP app/assets/javascripts<CR>
 map ,jas :CloseSingleConque<CR>:CtrlP app/assets/stylesheets<CR>

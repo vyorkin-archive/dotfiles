@@ -41,6 +41,8 @@ hi! link htmlTagName Type
 
 hi! PreProc gui=bold
 
+hi! Search guibg=#5fafdf cterm=NONE term=NONE ctermbg=74
+
 " Separators are a little garish.
 " This moves separators, comments, and normal
 " text into the same color family as the background.
