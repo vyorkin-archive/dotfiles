@@ -4,3 +4,6 @@
 [submodule "pure"]
 	path = pure
 	url = https://github.com/sindresorhus/pure.git
+[submodule "dotpryrc"]
+	path = dotpryrc
+	url = git@github.com:vyorkin/dotpryrc.git
