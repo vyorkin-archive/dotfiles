@@ -29,6 +29,6 @@ let g:rails_projections = {
       \    "related": "app/moodels/%s.rb",
       \    "affinity": "model"
       \ },
-
+\ }
       \ "features/support/*.rb": {"command": "support"},
       \ "features/support/env.rb": {"command": "support"}}

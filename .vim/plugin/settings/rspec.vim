@@ -24,7 +24,7 @@ nnoremap <silent> ,rxit :call ChangePendingRspecToXit()<cr>
 " insert a before { } block around a line
 nnoremap <silent> \bf ^ibefore { <esc>$a }
 
-let g:rspec_command = 'call Send_to_Tmux("bundle exec spec -f n --colour --backtrace {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 
 nnoremap <leader>i :IndentLinesToggle<cr>
 map <Leader>sl :call RunLastSpec()<CR>
