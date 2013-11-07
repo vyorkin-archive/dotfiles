@@ -8,4 +8,4 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#121212 ctermbg=233
 hi IndentGuidesOdd  guibg=#080808 ctermbg=232
 hi IndentGuidesEven guibg=#121212 ctermbg=233
 
-call indent_guides#enable()
+" call indent_guides#enable()
