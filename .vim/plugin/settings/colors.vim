@@ -69,5 +69,10 @@ hi! ColorColumn guibg=#1c1c1c ctermbg=234
 hi! CursorLine guibg=#1c1c1c ctermbg=234 cterm=NONE gui=NONE
 hi! CursorColumn guibg=#1c1c1c ctermbg=234 cterm=NONE gui=NONE
 
+highlight DiffAdd     cterm=NONE ctermbg=22 gui=NONE guibg=#005f00
+highlight DiffDelete  cterm=NONE ctermbg=234 ctermfg=0 gui=NONE guifg=#000000 guibg=#1c1c1c
+highlight DiffText    cterm=NONE ctermbg=237 gui=NONE guibg=#3a3a3a
+highlight DiffChange  cterm=NONE ctermbg=235 gui=NONE guibg=#262626
+
 " Enforce the colors set here
 au VimEnter * so ~/.vim/plugin/settings/colors.vim
