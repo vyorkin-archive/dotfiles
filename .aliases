@@ -34,6 +34,9 @@ if [ $MACVIM_INSTALLED -eq 0 ]; then
   alias vim="mvim -v"
 fi
 
+alias vimf='vim --noplugin -u $HOME/.vim/vundles.vim -N "+set hidden" "+syntax on"'
+alias mvimf='mvim --noplugin -N "+set hidden" "+syntax on"'
+
 # Common shell functions
 alias less='less -r'
 alias tf='tail -f'
