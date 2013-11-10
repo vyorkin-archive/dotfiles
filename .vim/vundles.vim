@@ -34,12 +34,12 @@ Bundle 'tpope/vim-cucumber'
 " Other languages
 Bundle 'briancollins/vim-jst'
 Bundle 'pangloss/vim-javascript'
-Bundle 'derekwyatt/vim-scala'
+" Bundle 'derekwyatt/vim-scala'
 Bundle 'vim-scripts/nginx.vim'
-Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
+" Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
 Bundle 'vim-scripts/JSON.vim'
-Bundle 'vim-perl/vim-perl'
-Bundle 'zaiste/VimClojure'
+" Bundle 'vim-perl/vim-perl'
+" Bundle 'zaiste/VimClojure'
 
 " Html, Xml, Css, Markdown...
 Bundle 'skammer/vim-css-color'
