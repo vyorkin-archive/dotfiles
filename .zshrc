@@ -27,6 +27,16 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit && promptinit
 prompt pure
 
+# auto predict
+autoload predict-on
+autoload predict-off
+
+# you may also wish to bind it to some keys...
+zle -N predict-on
+zle -N predict-off
+bindkey '^X1' predict-on
+bindkey '^X2' predict-off
+
 # Bootstrap
 
 export DOTFILES=$HOME/.dotfiles
