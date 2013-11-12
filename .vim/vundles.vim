@@ -125,7 +125,7 @@ Bundle 'thinca/vim-textobj-function-javascript'
 Bundle 'vim-scripts/argtextobj.vim'
 
 " Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'Yggdroot/indentLine'
+" Bundle 'Yggdroot/indentLine'
 
 " Cosmetics, airline...
 " Bundle 'chrisbra/color_highlight'
