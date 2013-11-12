@@ -10,7 +10,7 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
-"set lazyredraw
+set lazyredraw                  "Don't redraw while in macros
 cnoremap help vert help
 
 " This makes vim act like all other editors, buffers can

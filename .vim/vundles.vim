@@ -27,20 +27,20 @@ Bundle 'tpope/vim-bundler'
 Bundle 'vim-ruby/vim-ruby'
 " Bundle 'vim-scripts/Specky.git'
 Bundle 'skwp/vim-ruby-conque'
-Bundle 'ck3g/vim-change-hash-syntax'
+" Bundle 'ck3g/vim-change-hash-syntax'
 Bundle 'thoughtbot/vim-rspec'
-Bundle 'tpope/vim-cucumber'
-Bundle 'sunaku/vim-ruby-minitest'
+" Bundle 'tpope/vim-cucumber'
+" Bundle 'sunaku/vim-ruby-minitest'
 
 " Other languages
 Bundle 'briancollins/vim-jst'
 Bundle 'pangloss/vim-javascript'
-" Bundle 'derekwyatt/vim-scala'
+Bundle 'derekwyatt/vim-scala'
 Bundle 'vim-scripts/nginx.vim'
-" Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
+Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
 Bundle 'vim-scripts/JSON.vim'
-" Bundle 'vim-perl/vim-perl'
-" Bundle 'zaiste/VimClojure'
+Bundle 'vim-perl/vim-perl'
+Bundle 'zaiste/VimClojure'
 
 " Html, Xml, Css, Markdown...
 Bundle 'skammer/vim-css-color'
@@ -54,12 +54,12 @@ Bundle 'skwp/vim-html-escape'
 Bundle 'timcharper/textile.vim'
 
 " Scientific stuff
-Bundle 'gregsexton/VimCalc'
+" Bundle 'gregsexton/VimCalc'
 
 " Git related...
 Bundle 'gregsexton/gitv'
 Bundle 'mattn/gist-vim'
-Bundle 'skwp/vim-git-grep-rails-partial'
+" Bundle 'skwp/vim-git-grep-rails-partial'
 Bundle 'tjennings/git-grep-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
@@ -71,10 +71,10 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'briandoll/change-inside-surroundings.vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'scrooloose/snipmate-snippets'
+Bundle 'honza/vim-snippets'
 Bundle 'godlygeek/tabular'
 Bundle 'myusuf3/numbers.vim'
 
-Bundle 'honza/vim-snippets'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-scripts/camelcasemotion'
@@ -102,8 +102,8 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-scripts/AnsiEsc.vim'
-Bundle 'vim-scripts/AutoTag'
+" Bundle 'vim-scripts/AnsiEsc.vim'
+" Bundle 'vim-scripts/AutoTag'
 " Bundle 'vim-scripts/lastpos.vim'
 Bundle 'vim-scripts/sudo.vim'
 " Bundle 'xsunsmile/showmarks'
@@ -112,7 +112,7 @@ Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-easytags'
 
 " Text objects
-" Bundle 'austintaylor/vim-indentobject'
+Bundle 'austintaylor/vim-indentobject'
 Bundle 'bootleq/vim-textobj-rubysymbol'
 Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'kana/vim-textobj-datetime'
@@ -120,16 +120,17 @@ Bundle 'kana/vim-textobj-entire'
 Bundle 'kana/vim-textobj-function'
 Bundle 'kana/vim-textobj-user'
 Bundle 'lucapette/vim-textobj-underscore'
-" Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'Yggdroot/indentLine'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'thinca/vim-textobj-function-javascript'
 Bundle 'vim-scripts/argtextobj.vim'
 
+" Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Yggdroot/indentLine'
+
 " Cosmetics, airline...
-Bundle 'chrisbra/color_highlight'
-Bundle 'bling/vim-airline'
-Bundle 'vim-scripts/TagHighlight'
+" Bundle 'chrisbra/color_highlight'
+" Bundle 'bling/vim-airline'
+Bundle 'itchyny/lightline.vim'
 
 " Color schemes
 Bundle 'endel/vim-github-colorscheme'
@@ -144,27 +145,20 @@ Bundle 'therubymug/vim-pyte'
 Bundle 'tomasr/molokai'
 Bundle 'tpope/vim-vividchalk'
 
-" Bundle 'tomtom/quickfixsigns_vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'benmills/vimux'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'jgdavey/tslime.vim'
+" Bundle 'airblade/vim-gitgutter'
+" Bundle 'benmills/vimux'
+" Bundle 'jgdavey/tslime.vim'
 Bundle 'mattn/emmet-vim'
 " Bundle 'rizzatti/funcoo.vim'
 " Bundle 'rizzatti/dash.vim'
 
-Bundle 'mhinz/vim-startify'
-Bundle 'wikitopian/hardmode'
+" Bundle 'mhinz/vim-startify'
+" Bundle 'wikitopian/hardmode'
 Bundle 'jeroenbourgois/vim-actionscript'
 Bundle 'guns/xterm-color-table.vim'
 
-" Bundle "MarcWeber/vim-addon-async"
-" Bundle "MarcWeber/vim-addon-signs"
-" Bundle "MarcWeber/vim-addon-mw-utils"
-" Bundle "MarcWeber/vim-addon-rdebug"
-
-Bundle 'Zuckonit/vim-airline-tomato'
-Bundle 'FredKSchott/CoVim'
+" Bundle 'Zuckonit/vim-airline-tomato'
+" Bundle 'FredKSchott/CoVim'
 
 "Filetype plugin indent on is required by vundle
 filetype plugin indent on
