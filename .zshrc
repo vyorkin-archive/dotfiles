@@ -27,6 +27,9 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit && promptinit
 prompt pure
 
+# disable annoying autocorrect feature
+unsetopt correct_all
+
 # auto predict
 autoload predict-on
 autoload predict-off
