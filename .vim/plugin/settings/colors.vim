@@ -56,10 +56,11 @@ hi! VertSplit guibg=#080808 guifg=#1c1c1c cterm=NONE term=NONE ctermfg=234 cterm
 " hi! NonText guifg=#121212 ctermfg=232 ctermbg=232
 " hi! SpecialKey guifg=#121212 ctermfg=232 ctermbg=232
 
-hi! LineNR guifg=#262626 ctermbg=232 gui=bold guibg=#121212 ctermfg=235
+hi! LineNR guifg=#262626 ctermbg=232 gui=NONE term=NONE guibg=#121212 ctermfg=235
 hi! link NonText VertSplit
-hi! Constant guifg=#00df5f ctermfg=41
-hi! Comment guifg=#3A3A3A ctermfg=237
+hi! Constant guifg=#00df5f ctermfg=41 term=NONE gui=NONE
+hi! Statement gui=NONE term=NONE
+hi! Comment gui=NONE term=NONE guifg=#3A3A3A ctermfg=237
 hi! link htmlLink Include
 hi! Visual ctermbg=233
 hi! EasyMotionTarget guifg=#5fdf00 ctermfg=76 gui=bold cterm=bold

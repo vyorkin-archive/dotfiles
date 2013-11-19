@@ -147,7 +147,7 @@ Bundle 'tpope/vim-vividchalk'
 
 " Bundle 'airblade/vim-gitgutter'
 " Bundle 'benmills/vimux'
-" Bundle 'jgdavey/tslime.vim'
+Bundle 'jgdavey/tslime.vim'
 Bundle 'mattn/emmet-vim'
 " Bundle 'rizzatti/funcoo.vim'
 " Bundle 'rizzatti/dash.vim'
