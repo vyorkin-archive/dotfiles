@@ -44,7 +44,6 @@ nnoremap ,. '.
 " put the cursor right after the quote
 imap <C-a> <esc>wa
 
-" ,q to toggle quickfix window (where you have stuff like GitGrep)
 " ,oq to open it back up (rare)
 nmap <silent> ,qc :CloseSingleConque<CR>:cclose<CR>
 nmap <silent> ,qo :copen<CR>
