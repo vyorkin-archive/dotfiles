@@ -109,7 +109,7 @@ if has("gui_running")
   set lines=72
   set columns=200
 
-  set guifont=Inconsolata\ XL:h12,Inconsolata:h12,Monaco:h13
+  " set guifont=Inconsolata\ XL:h12,Inconsolata:h12,Monaco:h13
   " set fuopt+=maxhorz
   " set fu
 else

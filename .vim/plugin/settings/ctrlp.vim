@@ -11,8 +11,8 @@ let g:ctrlp_map = ',t'
 nnoremap <silent> ,t :CtrlP<CR>
 
 " Additional mapping for buffer search
-nnoremap <silent> ,b :CloseSingleConque<CR>:CtrlPBuffer<cr>
-nnoremap <silent> <C-b> :CloseSingleConque<CR>:CtrlPBuffer<cr>
+nnoremap <silent> ,b :CtrlPBuffer<cr>
+nnoremap <silent> <C-b> :CtrlPBuffer<cr>
 
 " Alt-p to clear the cache
 nnoremap <Esc>p :ClearCtrlPCache<cr>
@@ -20,30 +20,30 @@ nnoremap <Esc>p :ClearCtrlPCache<cr>
 " Idea from : http://www.charlietanksley.net/blog/blog/2011/10/18/vim-navigation-with-lustyexplorer-and-lustyjuggler/
 " Open CtrlP starting from a particular path, making it much
 " more likely to find the correct thing first. mnemonic 'jump to [something]'
-map ,jm :CloseSingleConque<CR>:CtrlP app/models<CR>
-map ,jc :CloseSingleConque<CR>:CtrlP app/controllers<CR>
-map ,jv :CloseSingleConque<CR>:CtrlP app/views<CR>
-map ,jh :CloseSingleConque<CR>:CtrlP app/helpers<CR>
+map ,jm :CtrlP app/models<CR>
+map ,jc :CtrlP app/controllers<CR>
+map ,jv :CtrlP app/views<CR>
+map ,jh :CtrlP app/helpers<CR>
 
-map ,j1 :CloseSingleConque<CR>:CtrlP app/serializers<CR>
-map ,j2 :CloseSingleConque<CR>:CtrlP app/mailers<CR>
-map ,j3 :CloseSingleConque<CR>:CtrlP app/forms<CR>
+map ,j1 :CtrlP app/serializers<CR>
+map ,j2 :CtrlP app/mailers<CR>
+map ,j3 :CtrlP app/forms<CR>
 
-map ,ja :CloseSingleConque<CR>:CtrlP app/assets<CR>
-map ,jaj :CloseSingleConque<CR>:CtrlP app/assets/javascripts<CR>
-map ,jas :CloseSingleConque<CR>:CtrlP app/assets/stylesheets<CR>
+map ,ja :CtrlP app/assets<CR>
+map ,jaj :CtrlP app/assets/javascripts<CR>
+map ,jas :CtrlP app/assets/stylesheets<CR>
 
-map ,jl :CloseSingleConque<CR>:CtrlP lib<CR>
-map ,jt :CloseSingleConque<CR>:CtrlP lib/tasks<CR>
+map ,jl :CtrlP lib<CR>
+map ,jt :CtrlP lib/tasks<CR>
 
-map ,jp :CloseSingleConque<CR>:CtrlP public<CR>
-map ,js :CloseSingleConque<CR>:CtrlP spec<CR>
-map ,jf :CloseSingleConque<CR>:CtrlP fast_spec<CR>
-map ,jd :CloseSingleConque<CR>:CtrlP db<CR>
-map ,jC :CloseSingleConque<CR>:CtrlP config<CR>
-map ,jV :CloseSingleConque<CR>:CtrlP vendor<CR>
-map ,jF :CloseSingleConque<CR>:CtrlP factories<CR>
-map ,jT :CloseSingleConque<CR>:CtrlP test<CR>
+map ,jp :CtrlP public<CR>
+map ,js :CtrlP spec<CR>
+map ,jf :CtrlP fast_spec<CR>
+map ,jd :CtrlP db<CR>
+map ,jC :CtrlP config<CR>
+map ,jV :CtrlP vendor<CR>
+map ,jF :CtrlP factories<CR>
+map ,jT :CtrlP test<CR>
 
 "Ctrl-m is not good - it overrides behavior of Enter
-map ,jj :CloseSingleConque<CR>:CtrlPBufTag<CR>
+map ,jj :CtrlPBufTag<CR>
