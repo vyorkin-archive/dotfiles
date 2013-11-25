@@ -85,12 +85,12 @@ Bundle 'tpope/vim-git'
 " General vim improvements
 " Bundle 'MarcWeber/vim-addon-mw-utils'
 " Bundle 'bogado/file-line'
+Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kien/ctrlp.vim'
 " Bundle 'majutsushi/tagbar'
 " Bundle 'mattn/webapi-vim'
 Bundle 'rking/ag.vim'
-Bundle 'scrooloose/nerdtree'
 " Bundle 'dsummersl/gundo.vim'
 
 " Bundle 'skwp/YankRing.vim'
@@ -109,7 +109,7 @@ Bundle 'tpope/vim-unimpaired'
 " Bundle 'xsunsmile/showmarks'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
-Bundle 'xolox/vim-easytags'
+" Bundle 'xolox/vim-easytags'
 
 " Text objects
 " Bundle 'austintaylor/vim-indentobject'
