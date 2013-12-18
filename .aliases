@@ -61,11 +61,13 @@ alias mks="tmux killscreen"
 # Tmuxinator
 alias muxl="mux list"
 alias mtmwww='mux tmwww'
+#
 alias mtmadmin='mux tmadmin'
 alias mfootball='mux football'
-
+# 
 alias mtwitties='mux twitties'
 alias mitsalive='mux itsalive'
+alias mr='mux rails-play'
 
 # Folders
 alias sites='cd ~/Sites/'
@@ -77,14 +79,18 @@ alias avr='cd ~/programming/play/avr/'
 alias gith='cd ~/GitHub/'
 
 # Projects
+
 ## Undev
 alias tmadmin='cd ~/programming/work/tm-apps-dev-box/apps/tm-admin/'
 alias tmadmin2='cd ~/programming/work/tm-apps-dev-box/apps/sandbox/tm-admin/'
 alias tmwww='cd ~/programming/work/tm-apps-dev-box/apps/telemarker/'
 alias football='cd ~/programming/work/football-cc-vagrant/apps/football-cc/'
+
+## Own
+alias dz='cd ~/github/rails-play-cookbook/apps/dzzzr'
+
 ## My
 alias dotfiles="cd ~/github/dotfiles"
-
 
 # Vargant
 alias vagi='vagrant init'

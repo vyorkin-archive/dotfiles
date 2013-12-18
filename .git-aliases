@@ -75,3 +75,5 @@ alias gt='git t'
 
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
+
+alias c='git clone'

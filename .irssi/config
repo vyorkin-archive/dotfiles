@@ -106,7 +106,8 @@ channels = (
   { name = "#haskell"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#haskell-web"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#hackage"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#rubyonrails"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#rubyonrails"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#erlang"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -296,70 +297,3 @@ settings = {
   };
 };
 hilights = ( { text = "vyorkin"; nick = "yes"; word = "yes"; } );
-windows = {
-  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
-  2 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#libgdx";
-        tag = "freenode";
-      }
-    );
-  };
-  3 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#jruby";
-        tag = "freenode";
-      }
-    );
-  };
-  4 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#haskell";
-        tag = "freenode";
-      }
-    );
-  };
-  5 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#haskell-web";
-        tag = "freenode";
-      }
-    );
-  };
-  6 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#hackage";
-        tag = "freenode";
-      }
-    );
-  };
-  7 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#rubyonrails";
-        tag = "freenode";
-      }
-    );
-  };
-};
-mainwindows = {
-  1 = { first_line = "8"; lines = "67"; };
-  7 = { first_line = "1"; lines = "7"; };
-};

@@ -91,7 +91,7 @@ Bundle 'kien/ctrlp.vim'
 " Bundle 'majutsushi/tagbar'
 " Bundle 'mattn/webapi-vim'
 Bundle 'rking/ag.vim'
-" Bundle 'dsummersl/gundo.vim'
+Bundle 'dsummersl/gundo.vim'
 
 " Bundle 'skwp/YankRing.vim'
 " Bundle 'skwp/greplace.vim'
