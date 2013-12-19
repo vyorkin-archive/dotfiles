@@ -11,6 +11,7 @@ task :install do
   install_homebrew if platform_is_darwin
   install_rvm_binstubs
   set_zsh_as_default_shell
+  install_zsh_pure
 
   dotfiles = %w(
     .dotfiles
@@ -66,6 +67,10 @@ end
 
 def set_zsh_as_default_shell
   `chsh -s /bin/zsh`
+end
+
+def install_zsh_pure
+  `ln -nfs "$PWD/pure/pure.zsh" "/usr/local/share/zsh/site-functions/prompt_pure_setup"`
 end
 
 def install_fonts
