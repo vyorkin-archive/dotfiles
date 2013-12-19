@@ -57,7 +57,8 @@ def install_homebrew
 end
 
 def install_rvm_binstubs
-  run %{ chmod +x $rvm_path/hooks/after_cd_bundler }
+  puts 'installing rvm binstubs'
+  `chmod +x $rvm_path/hooks/after_cd_bundler`
 end
 
 def install_fonts
@@ -89,8 +90,8 @@ def iterm_profile_list
 end
 
 def iterm_add_and_merge(name, file)
-  run %{ /usr/libexec/PlistBuddy -c "Add :'Custom Color Presets':'#{name}' dict" ~/Library/Preferences/com.googlecode.iterm2.plist }
-  run %{ /usr/libexec/PlistBuddy -c "Merge '#{file}' :'Custom Color Presets':'#{name}'" ~/Library/Preferences/com.googlecode.iterm2.plist }
+  `/usr/libexec/PlistBuddy -c "Add :'Custom Color Presets':'#{name}' dict" ~/Library/Preferences/com.googlecode.iterm2.plist`
+  `/usr/libexec/PlistBuddy -c "Merge '#{file}' :'Custom Color Presets':'#{name}'" ~/Library/Preferences/com.googlecode.iterm2.plist`
 end
 
 def install_oh_my_zsh
@@ -106,10 +107,10 @@ def symlink(source_file, target_file = nil)
   if File.exists?(target) && (!File.symlink?(target) || File.readlink(target) != source)
     puts "[Backup] #{target} -> #{target}.backup"
     puts "[Overwriting] #{target}"
-    run %{ mv "$HOME/.#{file}" "$HOME/.#{file}.backup" }
+    `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"`
   end
 
-  run %{ ln -nfs "#{source}" "#{target}" }
+  `ln -nfs "#{source}" "#{target}"`
 
   puts "[Ok]"
   puts
@@ -119,10 +120,10 @@ desc "Runs Vundle installer in a clean vim environment"
 task :install_vundle do
   vundle_path = File.join('.vim','bundle', 'vundle')
   unless File.exists?(vundle_path)
-    run %{
+    `
       cd $HOME
       git clone https://github.com/gmarik/vundle.git #{vundle_path}
-    }
+    `
   end
 
   Vundle::update_vundle
