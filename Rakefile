@@ -10,6 +10,7 @@ task :install do
   submodule_init
   install_homebrew if platform_is_darwin
   install_rvm_binstubs
+  set_zsh_as_default_shell
 
   dotfiles = %w(
     .dotfiles
@@ -61,6 +62,10 @@ def install_rvm_binstubs
   puts 'installing rvm binstubs'
   # TODO: Fix this stuff
   #`chmod +x $rvm_path/hooks/after_cd_bundler`
+end
+
+def set_zsh_as_default_shell
+  `chsh -s /bin/zsh`
 end
 
 def install_fonts
