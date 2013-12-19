@@ -109,7 +109,7 @@ Bundle 'tpope/vim-unimpaired'
 " Bundle 'xsunsmile/showmarks'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
-Bundle 'xolox/vim-easytags'
+" Bundle 'xolox/vim-easytags'
 
 " Text objects
 " Bundle 'austintaylor/vim-indentobject'
