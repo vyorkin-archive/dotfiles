@@ -11,8 +11,6 @@ task :install do
   install_homebrew if platform_is_darwin
   install_rvm_binstubs
 
-  Dir.mkdir(File.join(Dir.home, '.dotfiles'), 0700)
-
   dotfiles = %w(
     .dotfiles
     .aprc .bash_profile .bashrc .cabal .cheat .ctags .curlrc
@@ -58,7 +56,8 @@ end
 
 def install_rvm_binstubs
   puts 'installing rvm binstubs'
-  `chmod +x $rvm_path/hooks/after_cd_bundler`
+  # TODO: Fix this stuff
+  #`chmod +x $rvm_path/hooks/after_cd_bundler`
 end
 
 def install_fonts
