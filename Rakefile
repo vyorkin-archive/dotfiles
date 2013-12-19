@@ -14,7 +14,7 @@ task :install do
 
   dotfiles = %w(
     .dotfiles
-    .aprc .bash_profile .bashrc .cabal .cheat .ctags .curlrc
+    .aprc .bash_profile .bashrc .cabal .cheat .ctags .curlrc .gitconfig
     .gemrc .ghci .gitk .htoprc .irssi .profile .tmux .tmux.config .tmuxinator
     .vim .vimrc .zlogin .zlogout .zprofile .zshenv .zshrc .oh-my-zsh
   )
