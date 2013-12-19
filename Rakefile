@@ -112,7 +112,7 @@ def make_symlink(source_file, target_file = nil)
   if File.exists?(target) && (!File.symlink?(target) || File.readlink(target) != source)
     puts "[Backup] #{target} -> #{target}.backup"
     puts "[Overwriting] #{target}"
-    `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"`
+    `mv "#{target}" "#{target}.backup"`
   end
 
   `ln -nfs "#{source}" "#{target}"`
@@ -123,7 +123,7 @@ end
 
 desc "Runs Vundle installer in a clean vim environment"
 task :install_vundle do
-  vundle_path = File.join('.vim','bundle', 'vundle')
+  vundle_path = File.join('.vim', 'bundle', 'vundle')
   unless File.exists?(vundle_path)
     `
       cd $HOME
