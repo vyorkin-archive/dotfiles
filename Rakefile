@@ -19,7 +19,7 @@ task :install do
   )
 
   puts 'symlinking dotfiles'
-  dotfiles.each { |f| symlink(f) }
+  dotfiles.each { |f| make_symlink(f) }
 
   Rake::Task['install_vundle'].execute
 
@@ -94,10 +94,10 @@ def iterm_add_and_merge(name, file)
 end
 
 def install_oh_my_zsh
-  symlink('oh-my-zsh', '.oh-my-zsh')
+  make_symlink('oh-my-zsh', '.oh-my-zsh')
 end
 
-def symlink(source_file, target_file = nil)
+def make_symlink(source_file, target_file = nil)
   source = "#{ENV["PWD"]}/#{source_file}"
   target = "#{ENV["HOME"]}/#{target_file || source_file}"
 
