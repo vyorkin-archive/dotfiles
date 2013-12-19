@@ -219,7 +219,6 @@ statusbar = {
         window = { };
         window_empty = { };
         lag = { priority = "-1"; };
-        act = { priority = "10"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
         usercount = { };
@@ -284,10 +283,14 @@ settings = {
     real_name = "Vasiliy Yorkin";
     user_name = "vyorkin";
     nick = "vyorkin";
-    timestamp_format = "%H:%M:%S";
+    timestamp_format = "%H:%M";
   };
   "fe-text" = { actlist_sort = "refnum"; term_force_colors = "yes"; };
-  "fe-common/core" = { theme = "xchat"; };
+  "fe-common/core" = {
+    theme = "fear2";
+    activity_hide_targets = "$-";
+    activity_hide_level = "parts joins quits nicks modes";
+  };
   "perl/core/scripts" = {
     awl_display_key = "$Q%K|$N%n $H$C$S";
     awl_block = "-14";
@@ -297,3 +300,82 @@ settings = {
   };
 };
 hilights = ( { text = "vyorkin"; nick = "yes"; word = "yes"; } );
+ignores = (
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#libgdx" ); },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#haskell" ); },
+  { 
+    level = "JOINS PARTS QUITS NICKS";
+    channels = ( "#haskell-web" );
+  },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#jruby" ); },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#erlang" ); },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#hackage" ); }
+);
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#libgdx";
+        tag = "freenode";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#jruby";
+        tag = "freenode";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#haskell";
+        tag = "freenode";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#haskell-web";
+        tag = "freenode";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#hackage";
+        tag = "freenode";
+      }
+    );
+  };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#erlang";
+        tag = "freenode";
+      }
+    );
+  };
+  8 = { name = "hilight"; sticky = "yes"; };
+};
+mainwindows = {
+  2 = { first_line = "6"; lines = "18"; };
+  8 = { first_line = "1"; lines = "5"; };
+};

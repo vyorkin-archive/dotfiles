@@ -20,10 +20,10 @@ Bundle "gmarik/vundle"
 
 " Ruby, Rails, Rake...
 Bundle 'tpope/vim-rails'
-" Bundle 'tpope/vim-rake'
-" Bundle 'tpope/vim-rvm'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-haml'
-" Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-bundler'
 Bundle 'vim-ruby/vim-ruby'
 " Bundle 'vim-scripts/Specky.git'
 " Bundle 'skwp/vim-ruby-conque'
@@ -80,7 +80,7 @@ Bundle 'tpope/vim-git'
 " Bundle 'vim-scripts/camelcasemotion'
 " Bundle 'goldfeld/vim-seek'
 " Bundle 'vim-scripts/matchit.zip'
-" Bundle 'terryma/vim-multiple-cursors'
+Bundle 'terryma/vim-multiple-cursors'
 
 " General vim improvements
 " Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -109,7 +109,7 @@ Bundle 'tpope/vim-unimpaired'
 " Bundle 'xsunsmile/showmarks'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
-" Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-easytags'
 
 " Text objects
 " Bundle 'austintaylor/vim-indentobject'
