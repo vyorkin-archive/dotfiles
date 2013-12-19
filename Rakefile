@@ -18,7 +18,10 @@ task :install do
     .vim .vimrc .zlogin .zlogout .zprofile .zshenv .zshrc .oh-my-zsh
   )
 
-  puts 'symlinking dotfiles'
+  puts 'symlinking dotfiles:'
+  puts dotfiles.inspect
+  puts
+
   dotfiles.each { |f| make_symlink(f) }
 
   Rake::Task['install_vundle'].execute
@@ -98,6 +101,9 @@ def install_oh_my_zsh
 end
 
 def make_symlink(source_file, target_file = nil)
+  puts "source file: #{source_file}"
+  puts "target file: #{target_file}"
+
   source = "#{ENV["PWD"]}/#{source_file}"
   target = "#{ENV["HOME"]}/#{target_file || source_file}"
 
