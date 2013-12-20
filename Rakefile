@@ -18,7 +18,7 @@ task :install do
     .dotfiles
     .aprc .bash_profile .bashrc .cabal .cheat .ctags .curlrc .gitconfig
     .gemrc .ghci .gitk .htoprc .irssi .profile .tmux .tmux.config .tmuxinator
-    .vim .vimrc .zlogin .zlogout .zprofile .zshenv .zshrc .oh-my-zsh
+    .vim .vimrc .zlogin .zlogout .zprofile .zshenv .zshrc
   )
 
   puts 'symlinking dotfiles:'
