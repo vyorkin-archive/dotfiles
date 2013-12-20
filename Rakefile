@@ -71,7 +71,7 @@ def set_zsh_as_default_shell
 end
 
 def install_zsh_pure
-  `ln -nfs "#{HOME["PWD"]}/pure/pure.zsh" "/usr/local/share/zsh/site-functions/prompt_pure_setup"`
+  `ln -nfs "#{ENV["PWD"]}/pure/pure.zsh" "/usr/local/share/zsh/site-functions/prompt_pure_setup"`
 end
 
 def install_fonts
