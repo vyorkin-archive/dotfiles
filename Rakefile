@@ -11,6 +11,7 @@ task :install do
   install_homebrew if platform_is_darwin
   install_rvm_binstubs
   set_zsh_as_default_shell
+  install_oh_my_zsh
   install_zsh_pure
 
   dotfiles = %w(
