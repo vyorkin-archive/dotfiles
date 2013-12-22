@@ -13,6 +13,8 @@ task :install do
   set_zsh_as_default_shell
   install_oh_my_zsh
   install_zsh_pure
+  install_dotpryrc
+  install_gems
 
   dotfiles = %w(
     .dotfiles
@@ -109,6 +111,19 @@ end
 
 def install_oh_my_zsh
   make_symlink('oh-my-zsh', '.oh-my-zsh')
+end
+
+def install_dotpryrc
+  make_symlink('dotpryrc/.pryrc', '.pryrc')
+  make_symlink('dotpryrc/.pryrc-helpers.rb', '.pryrc-helpers.rb')
+end
+
+def install_gems
+  `gem install pry`
+  `gem install hirb`
+  `gem install awesome_print`
+  `gem install sketches`
+  `gem install pry-stack_explorer`
 end
 
 def make_symlink(source_file, target_file = nil)

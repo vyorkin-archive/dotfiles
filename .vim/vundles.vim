@@ -30,7 +30,7 @@ Bundle 'vim-ruby/vim-ruby'
 " Bundle 'ck3g/vim-change-hash-syntax'
 " Bundle 'thoughtbot/vim-rspec'
 " Bundle 'tpope/vim-cucumber'
-" Bundle 'sunaku/vim-ruby-minitest'
+Bundle 'sunaku/vim-ruby-minitest'
 
 " Other languages
 " Bundle 'briancollins/vim-jst'
@@ -125,7 +125,7 @@ Bundle 'xolox/vim-session'
 " Bundle 'vim-scripts/argtextobj.vim'
 
 " Bundle 'nathanaelkane/vim-indent-guides'
-" Bundle 'Yggdroot/indentLine'
+Bundle 'Yggdroot/indentLine'
 
 " Cosmetics, airline...
 " Bundle 'chrisbra/color_highlight'
