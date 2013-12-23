@@ -45,10 +45,8 @@ end
 
 # Exception
 Pry.config.exception_handler = proc do |output, exception, _|
-  if ___
-    puts ___.colorize "#{exception.class}: #{exception.message}", 31
-    puts ___.colorize "from #{exception.backtrace.first}", 31
-  end
+  puts ___.colorize "#{exception.class}: #{exception.message}", 31
+  puts ___.colorize "from #{exception.backtrace.first}", 31
 end
 
 if defined? PryNav || defined? PryDebugger
