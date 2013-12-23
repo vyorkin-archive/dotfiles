@@ -56,7 +56,7 @@ hi! VertSplit guibg=#080808 guifg=#1c1c1c cterm=NONE term=NONE ctermfg=234 cterm
 " hi! NonText guifg=#121212 ctermfg=232 ctermbg=232
 " hi! SpecialKey guifg=#121212 ctermfg=232 ctermbg=232
 
-hi! LineNR guifg=#262626 ctermbg=232 gui=NONE term=NONE guibg=#121212 ctermfg=235
+hi! LineNR guifg=#262626 ctermbg=232 gui=NONE term=NONE guibg=#080808 ctermfg=235
 hi! link NonText VertSplit
 hi! Constant guifg=#00df5f ctermfg=41 term=NONE gui=NONE
 hi! Statement gui=NONE term=NONE

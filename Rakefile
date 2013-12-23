@@ -120,6 +120,9 @@ end
 
 def install_gems
   `gem install pry`
+  `gem install pry-debugger`
+  `gem install pry-nav`
+  `gem install debugger`
   `gem install hirb`
   `gem install awesome_print`
   `gem install sketches`
