@@ -28,6 +28,7 @@ task :install do
   puts
 
   dotfiles.each { |f| make_symlink(f) }
+  make_symlink('gitignore', '.gitignore')
 
   Rake::Task['install_vundle'].execute
 
