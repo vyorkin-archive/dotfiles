@@ -30,7 +30,7 @@ end
 if defined? Minitest
   module Minitest::Assertions
     def mu_pp(obj)
-      obj.awesome_inspect
+      obj.awesome_inspect if obj.respond_to?(:awesome_inspect)
     end
   end
 end
