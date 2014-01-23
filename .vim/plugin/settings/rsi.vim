@@ -6,6 +6,6 @@
 " dashes are very common, and in position that require
 " a lot of hand movement. Vim to the rescue
 
-imap <silent> <C-d> _
-imap <silent> <C-f> -
+imap <silent> <D-h> _
+imap <silent> <D-g> -
 

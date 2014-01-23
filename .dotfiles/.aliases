@@ -64,6 +64,7 @@ alias mtmwww='mux tmwww'
 #
 alias mtmadmin='mux tmadmin'
 alias mfootball='mux football'
+alias msochi='mux sochi'
 # 
 alias mtwitties='mux twitties'
 alias mitsalive='mux itsalive'
@@ -85,6 +86,7 @@ alias tmadmin='cd ~/programming/work/tm-apps-dev-box/apps/tm-admin/'
 alias tmadmin2='cd ~/programming/work/tm-apps-dev-box/apps/sandbox/tm-admin/'
 alias tmwww='cd ~/programming/work/tm-apps-dev-box/apps/telemarker/'
 alias football='cd ~/programming/work/football-cc-vagrant/apps/football-cc/'
+alias football='cd ~/programming/work/football-cc-vagrant/apps/control-center/'
 
 ## Own
 alias dz='cd ~/github/rails-play-cookbook/apps/dzzzr'
