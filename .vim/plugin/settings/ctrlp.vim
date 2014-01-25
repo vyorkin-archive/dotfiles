@@ -25,11 +25,11 @@ map ,jc :CtrlP app/controllers<CR>
 map ,jv :CtrlP app/views<CR>
 map ,jh :CtrlP app/helpers<CR>
 
-map ,j1 :CtrlP app/serializers<CR>
-map ,j2 :CtrlP app/mailers<CR>
-map ,j3 :CtrlP app/forms<CR>
+map ,j1 :CtrlP app/forms<CR>
+map ,j2 :CtrlP app/serializers<CR>
+map ,j3 :CtrlP app/mailers<CR>
 
-map ,ja :CtrlP app/assets<CR>
+map ,ja :CtrlP  app/assets<CR>
 map ,jaj :CtrlP app/assets/javascripts<CR>
 map ,jas :CtrlP app/assets/stylesheets<CR>
 
@@ -38,11 +38,11 @@ map ,jt :CtrlP lib/tasks<CR>
 
 map ,jp :CtrlP public<CR>
 map ,js :CtrlP spec<CR>
-map ,jf :CtrlP fast_spec<CR>
+map ,jf :CtrlP spec/factories<CR>
 map ,jd :CtrlP db<CR>
+map ,jdm :CtrlP db/migrate<CR>
 map ,jC :CtrlP config<CR>
 map ,jV :CtrlP vendor<CR>
-map ,jF :CtrlP factories<CR>
 map ,jT :CtrlP test<CR>
 
 "Ctrl-m is not good - it overrides behavior of Enter
