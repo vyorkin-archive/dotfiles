@@ -37,6 +37,8 @@ task :install do
     install_fonts
    #puts 'installing iterm themes'
    #install_iterm_themes
+  else
+    install_apt_packages
   end
 end
 
@@ -61,6 +63,10 @@ def install_homebrew
     `brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher`
     puts
   end
+end
+
+def install_apt_packages
+  # TODO
 end
 
 def install_rvm_binstubs
@@ -120,14 +126,13 @@ def install_dotpryrc
 end
 
 def install_gems
-  `gem install pry`
-  `gem install pry-debugger`
-  `gem install pry-nav`
-  `gem install debugger`
-  `gem install hirb`
-  `gem install awesome_print`
-  `gem install sketches`
-  `gem install pry-stack_explorer`
+  gems = %w(
+    pry pry-debugger pry-nav debugger pry-remote pry-doc
+    pry-git awesome_print sketches
+    hirb hirb-unicode pry-stack_explorer
+    pry-rails pry-theme coolline coderay jazz_hands
+  )
+  `gem install #{gems.join('')}`
 end
 
 def make_symlink(source_file, target_file = nil)
