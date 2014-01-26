@@ -3,98 +3,198 @@ require 'fileutils'
 
 require File.join(File.dirname(__FILE__), 'bin', 'vundle')
 
-desc 'Install dotfiles'
-task :install do
-  platform_is_darwin = RUBY_PLATFORM.downcase.include?('darwin')
+namespace :install do
+  desc 'Install all'
+  task :all do
+    submodule_init
 
-  submodule_init
-  install_homebrew if platform_is_darwin
-  install_rvm_binstubs
-  set_zsh_as_default_shell
-  install_oh_my_zsh
-  install_zsh_pure
-  install_dotpryrc
-  install_gems
+    Rake::Task['symlink:all'].invoke
+    %w(vundle gems packages rvm_binstubs).each do |t|
+      Rake::Task["install:#{t}"].invoke
+    end
 
-  dotfiles = %w(
-    .dotfiles
-    .aprc .bash_profile .bashrc .cabal .cheat .ctags .curlrc .gitconfig
-    .gemrc .ghci .gitk .htoprc .irssi .profile .tmux .tmux.config .tmuxinator
-    .vim .vimrc .zlogin .zlogout .zprofile .zshenv .zshrc
-  )
+    set_zsh_as_default_shell
+  end
 
-  puts 'symlinking dotfiles:'
-  puts dotfiles.inspect
-  puts
+  desc 'Install packages'
+  task :packages do
+    task_name = platform_is_darwin? 'darwin:setup' : 'linux:setup'
+    Rake::Task[task_name].invoke
+  end
 
-  dotfiles.each { |f| make_symlink(f) }
-  make_symlink('gitignore', '.gitignore')
+  desc 'Install gems'
+  task :gems do
+    gems = %w(
+      pry pry-debugger pry-nav debugger pry-remote pry-doc
+      pry-git awesome_print sketches
+      hirb hirb-unicode pry-stack_explorer
+      pry-rails pry-theme coolline coderay jazz_hands
+    )
+    `gem install #{gems.join('')}`
+  end
 
-  Rake::Task['install_vundle'].execute
+  desc 'Runs Vundle installer in a clean vim environment'
+  task :vundle do
+    vundle_path = File.join('.vim', 'bundle', 'vundle')
+    unless File.exists?(vundle_path)
+      `
+        cd $HOME
+        git clone https://github.com/gmarik/vundle.git #{vundle_path}
+      `
+    end
 
-  if platform_is_darwin
+    Vundle::update_vundle
+  end
+
+  desc 'Install rvm binstubs'
+  task :rvm_binstubs do
+    puts 'installing rvm binstubs'
+    # TODO: Fix this stuff
+    #`chmod +x $rvm_path/hooks/after_cd_bundler`
+  end
+end
+
+namespace :linux do
+  desc 'Install linux usefull packages'
+  task :setup do
+    # TODO: add silver_searher (see README in its repo)
+    options = '--fix-missing -y -qq zsh ctags tmux'
+    `sudo apt-get update #{options}`
+    `sudo apt-get upgrade #{options}`
+    `sudo apt-get install #{options}`
+  end
+end
+
+namespace :darwin do
+  desc 'Install mac os x package manager & usefull packages'
+  task :setup do
+    `which brew`
+    Rake::Task['darwin:homebrew:install'].invoke unless $?.success?
+    %w(update install_packages).each do |t|
+      Rake::Task["darwin:homebrew:#{t}"].invoke
+    end
+    %w(install_fonts install_iterm_themes).each do |t|
+      Rake::Task["darwin:#{t}"].invoke
+    end
+  end
+
+  desc 'Install custom fonts for mac os x'
+  task :install_fonts do
     puts 'installing fonts'
-    install_fonts
-   #puts 'installing iterm themes'
-   #install_iterm_themes
-  else
-    install_apt_packages
+    `cp -f fonts/* $HOME/Library/Fonts`
+    puts
+  end
+
+  desc 'Install additional iterm themes for mac os x'
+  task :install_iterm_themes do
+    puts 'installing iterm themes'
+    # TODO: Make sure all themes are supported
+    if !File.exists?(File.join(ENV['HOME'], '/Library/Preferences/com.googlecode.iterm2.plist'))
+      return
+    end
+  end
+
+  namespace :homebrew do
+    desc 'Install homebrew'
+    task :install do
+      puts 'installing homebrew'
+      `ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"`
+      puts
+    end
+
+    desc 'Update homebrew'
+    task :update do
+      puts 'updating homebrew'
+      `brew update`
+      puts
+    end
+
+    desc 'Install packages'
+    task :install_packages do
+      puts 'installing required homebrew packages'
+      `brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher`
+      puts
+    end
+  end
+end
+
+namespace :symlink do
+  desc 'Symlink all dotfiles'
+  task :all do
+    %w(
+      bash infrastructure git zsh tmux
+      vim oh_my_zsh dotpryrc zsh_pure
+    ).each do |t|
+      Rake::Task["symlink:#{t}"].invoke
+    end
+  end
+
+  desc 'Symlink bash dotfiles'
+  task :bash do
+    make_symlinks(%w(.profile .bash_profile .bashrc))
+  end
+
+  desc 'Symlink infrastructure dotfiles (htop, irssi, etc)'
+  task :infrastructure do
+    make_symlinks(%w(
+      .dotfiles .aprc .cabal .cheat .ctags
+      .curlrc .gemrc .ghci .htoprc .irssi
+    ))
+  end
+
+  desc 'Symlink git dotfiles'
+  task :git do
+    make_symlinks({
+      '.gitconfig' => '.gitconfig',
+      'gitignore'  => '.gitignore',
+      '.gitk'      => '.gitk'
+    })
+  end
+
+  desc 'Symlink zsh dotfiles'
+  task :zsh do
+    make_symlinks(%w(.zlogin .zlogout .zprofile .zshenv .zshrc))
+  end
+
+  desc 'Symlink tmux dotfiles'
+  task :tmux do
+    make_symlinks(%w(.tmux .tmux.config .tmuxinator))
+  end
+
+  desc 'Symlink vim dotfiles'
+  task :vim do
+    make_symlinks(%w(.vim .vimrc))
+  end
+
+  desc 'Symlink oh_my_zsh submodule'
+  task :oh_my_zsh do
+    make_symlinks({'oh-my-zsh' => '.oh-my-zsh'})
+  end
+
+  desc 'Symlink dotpryrc submodule'
+  task :dotpryrc do
+    make_symlinks({
+      'dotpryrc/.pryrc' => '.pryrc',
+      'dotpryrc/.pryrc-helpers.rb' => '.pryrc-helpers.rb'
+    })
+  end
+
+  desc 'Symlink zsh pure submodule'
+  task :zsh_pure do
+    `ln -nfs "#{ENV["PWD"]}/pure/pure.zsh" "/usr/local/share/zsh/site-functions/prompt_pure_setup"`
   end
 end
 
 private
 
-def submodule_init
-  puts 'initializing submodules'
-  `git submodule update --init --recursive`
-  puts
-end
-
-def install_homebrew
-  `which brew`
-  unless $?.success?
-    puts 'installing homebrew'
-    `ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"`
-    puts
-  else
-    puts 'updating homebrew'
-    `brew update`
-    puts 'installing required homebrew packages'
-    `brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher`
-    puts
-  end
-end
-
-def install_apt_packages
-  # TODO
-end
-
-def install_rvm_binstubs
-  puts 'installing rvm binstubs'
-  # TODO: Fix this stuff
-  #`chmod +x $rvm_path/hooks/after_cd_bundler`
+def platform_is_darwin?
+  RUBY_PLATFORM.downcase.include?('darwin')
 end
 
 def set_zsh_as_default_shell
   `chsh -s /bin/zsh`
 end
 
-def install_zsh_pure
-  `ln -nfs "#{ENV["PWD"]}/pure/pure.zsh" "/usr/local/share/zsh/site-functions/prompt_pure_setup"`
-end
-
-def install_fonts
-  puts 'installing fonts'
-  `cp -f fonts/* $HOME/Library/Fonts`
-  puts
-end
-
-def install_iterm_themes
-  # TODO: Make sure all themes are supported
-  if !File.exists?(File.join(ENV['HOME'], '/Library/Preferences/com.googlecode.iterm2.plist'))
-    return
-  end
-end
 
 def iterm_available_themes
   Dir['iterm/**/*.itermcolors'].map do |filename|
@@ -116,57 +216,31 @@ def iterm_add_and_merge(name, file)
   `/usr/libexec/PlistBuddy -c "Merge '#{file}' :'Custom Color Presets':'#{name}'" ~/Library/Preferences/com.googlecode.iterm2.plist`
 end
 
-def install_oh_my_zsh
-  make_symlink('oh-my-zsh', '.oh-my-zsh')
-end
-
-def install_dotpryrc
-  make_symlink('dotpryrc/.pryrc', '.pryrc')
-  make_symlink('dotpryrc/.pryrc-helpers.rb', '.pryrc-helpers.rb')
-end
-
-def install_gems
-  gems = %w(
-    pry pry-debugger pry-nav debugger pry-remote pry-doc
-    pry-git awesome_print sketches
-    hirb hirb-unicode pry-stack_explorer
-    pry-rails pry-theme coolline coderay jazz_hands
-  )
-  `gem install #{gems.join('')}`
-end
-
-def make_symlink(source_file, target_file = nil)
-  puts "source file: #{source_file}"
-  puts "target file: #{target_file}"
-
-  source = "#{ENV["PWD"]}/#{source_file}"
-  target = "#{ENV["HOME"]}/#{target_file || source_file}"
-
-  puts "source: #{source}, target: #{target}"
-
-  if File.exists?(target) && (!File.symlink?(target) || File.readlink(target) != source)
-    puts "[Backup] #{target} -> #{target}.backup"
-    puts "[Overwriting] #{target}"
-    `mv "#{target}" "#{target}.backup"`
-  end
-
-  `ln -nfs "#{source}" "#{target}"`
-
-  puts "[Ok]"
+def make_symlinks(map)
+  puts 'symlinking:'
+  puts map.inspect
   puts
-end
 
-desc "Runs Vundle installer in a clean vim environment"
-task :install_vundle do
-  vundle_path = File.join('.vim', 'bundle', 'vundle')
-  unless File.exists?(vundle_path)
-    `
-      cd $HOME
-      git clone https://github.com/gmarik/vundle.git #{vundle_path}
-    `
+  map.each do |source_file, target_file|
+    puts "source file: #{source_file}"
+    puts "target file: #{target_file}"
+
+    source = "#{ENV["PWD"]}/#{source_file}"
+    target = "#{ENV["HOME"]}/#{target_file || source_file}"
+
+    puts "source: #{source}, target: #{target}"
+
+    if File.exists?(target) && (!File.symlink?(target) || File.readlink(target) != source)
+      puts "[Backup] #{target} -> #{target}.backup"
+      puts "[Overwriting] #{target}"
+      `mv "#{target}" "#{target}.backup"`
+    end
+
+    `ln -nfs "#{source}" "#{target}"`
+
+    puts "[Ok]"
+    puts
   end
-
-  Vundle::update_vundle
 end
 
-task :default => 'install'
+task :default => 'install:all'
