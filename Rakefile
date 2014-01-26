@@ -3,11 +3,17 @@ require 'fileutils'
 
 require File.join(File.dirname(__FILE__), 'bin', 'vundle')
 
+desc 'Update/initialize submodules'
+task :update_submodules do
+  puts 'initializing submodules'
+  `git submodule update --init --recursive`
+  puts
+end
+
 namespace :install do
   desc 'Install all'
   task :all do
-    submodule_init
-
+    Rake::Task['update_submodules'].invoke
     Rake::Task['symlink:all'].invoke
     %w(vundle gems packages rvm_binstubs).each do |t|
       Rake::Task["install:#{t}"].invoke
