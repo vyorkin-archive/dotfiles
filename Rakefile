@@ -64,10 +64,9 @@ namespace :linux do
   desc 'Install linux usefull packages'
   task :setup do
     # TODO: add silver_searher (see README in its repo)
-    options = '--fix-missing -y -qq zsh ctags tmux'
-    `sudo apt-get update #{options}`
-    `sudo apt-get upgrade #{options}`
-    `sudo apt-get install #{options}`
+    `sudo apt-get update`
+    `sudo apt-get upgrade`
+    `sudo apt-get install --fix-missing -y -qq zsh ctags tmux`
   end
 end
 
