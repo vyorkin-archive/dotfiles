@@ -36,7 +36,7 @@ namespace :install do
       hirb hirb-unicode pry-stack_explorer
       pry-rails pry-theme coolline coderay jazz_hands
     )
-    `gem install #{gems.join('')}`
+    `gem install #{gems.join(' ')}`
   end
 
   desc 'Runs Vundle installer in a clean vim environment'
