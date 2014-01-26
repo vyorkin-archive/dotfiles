@@ -4,13 +4,27 @@
 name: Football
 root: ~/programming/work/football-cc-vagrant/apps/football-cc
 socket_name: tmux_football
-# pre_window: rvm use 2.0.0 & clear 
-# tmux_options: -2
 windows:
   - main:
       layout: 3c9d,363x81,0,0[364x52,0,0{181x52,0,0,0,182x52,182,0,1},364x28,0,53,2]
       panes:
-        - tail -f log/development.log
-        - vagssh
-        - git branch
-  - console: vagssh
+        - logs:
+          - tail -f log/development.log
+        - console:
+          - vagssh
+          -  cd /apps/football-cc
+          - rails c
+        - server:
+          - vagssh
+          -  cd /apps/football-cc
+          - unicorn
+  - dev:
+      layout: 3c9d,363x81,0,0[364x52,0,0{181x52,0,0,0,182x52,182,0,1},364x28,0,53,2]
+      panes:
+        - spec:
+          - vagssh
+          -  cd /apps/football-cc
+        - editor:
+          - vim
+        - git:
+          - git branch
