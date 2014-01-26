@@ -117,7 +117,7 @@ namespace :darwin do
     desc 'Install packages'
     task :install_packages do
       puts 'installing required homebrew packages'
-      `brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher fasd`
+      `brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher fasd git-flow`
       puts
     end
   end
