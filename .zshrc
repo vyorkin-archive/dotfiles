@@ -23,7 +23,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 DISABLE_UPDATE_PROMPT=true
 
-plugins=(ant battery brew bundler capistrano coffee cp gem git github heroku history history-substring-search jruby knife lein node npm osx perl python rails rake rsync ruby rvm scala sublime tmux tmuxinator torrent vagrant vundle)
+plugins=(ant fasd battery brew bundler capistrano coffee cp gem git github heroku history history-substring-search jruby knife lein node npm osx perl python rails rake rsync ruby rvm scala sublime tmux tmuxinator torrent vagrant vundle)
 
 source $ZSH/oh-my-zsh.sh
 
