@@ -31,7 +31,7 @@ namespace :install do
   desc 'Install gems'
   task :gems do
     gems = %w(
-      pry pry-debugger pry-nav debugger pry-remote pry-doc
+      ghi pry pry-debugger pry-nav debugger pry-remote pry-doc
       pry-git awesome_print sketches
       hirb hirb-unicode pry-stack_explorer
       pry-rails pry-theme coolline coderay jazz_hands
