@@ -35,6 +35,7 @@ namespace :install do
       pry-git awesome_print sketches
       hirb hirb-unicode pry-stack_explorer
       pry-rails pry-theme coolline coderay jazz_hands
+      gas gas_stats
     )
     `gem install #{gems.join(' ')}`
   end
@@ -117,7 +118,7 @@ namespace :darwin do
     desc 'Install packages'
     task :install_packages do
       puts 'installing required homebrew packages'
-      `brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher fasd git-flow`
+      `brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher fasd git-flow git-extras`
       puts
     end
   end
