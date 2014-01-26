@@ -18,7 +18,7 @@ namespace :install do
 
   desc 'Install packages'
   task :packages do
-    task_name = platform_is_darwin? 'darwin:setup' : 'linux:setup'
+    task_name = platform_is_darwin? ? 'darwin:setup' : 'linux:setup'
     Rake::Task[task_name].invoke
   end
 
