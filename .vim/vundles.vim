@@ -126,8 +126,10 @@ Bundle 'xolox/vim-session'
 
 " Cosmetics, airline...
 " Bundle 'chrisbra/color_highlight'
-" Bundle 'bling/vim-airline'
-Bundle 'itchyny/lightline.vim'
+Bundle 'bling/vim-airline'
+Bundle 'edkolev/tmuxline.vim'
+" Bundle 'Localtog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Bundle 'itchyny/lightline.vim'
 
 " Color schemes
 Bundle 'endel/vim-github-colorscheme'
@@ -140,6 +142,7 @@ Bundle 'wesgibbs/vim-irblack'
 Bundle 'vim-scripts/mayansmoke'
 Bundle 'therubymug/vim-pyte'
 Bundle 'tomasr/molokai'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-vividchalk'
 
 " Bundle 'airblade/vim-gitgutter'
