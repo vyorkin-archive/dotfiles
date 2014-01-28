@@ -15,7 +15,10 @@ namespace :install do
   task :all do
     Rake::Task['update_submodules'].invoke
     Rake::Task['symlink:all'].invoke
-    %w(vundle gems packages rvm_binstubs).each do |t|
+    %w(
+      vundle gems packages rvm_binstubs
+      powerline_shell
+    ).each do |t|
       Rake::Task["install:#{t}"].invoke
     end
 
@@ -31,13 +34,16 @@ namespace :install do
   desc 'Install gems'
   task :gems do
     gems = %w(
-      ghi pry pry-debugger pry-nav debugger pry-remote pry-doc
+      ghi pry pry-remote pry-doc
       pry-git awesome_print sketches
       hirb hirb-unicode pry-stack_explorer
-      pry-rails pry-theme coolline coderay jazz_hands
-      gas gas_stats
+      pry-rails pry-theme coolline coderay
+      gist jist gas gas_stats
     )
-    `gem install #{gems.join(' ')}`
+    gem i #{gems.join(' ')}`
+
+    `gem i byebug minitest-byebug`
+    `gem i pry-byebug --version 1.1.1`
   end
 
   desc 'Runs Vundle installer in a clean vim environment'
@@ -51,6 +57,14 @@ namespace :install do
     end
 
     Vundle::update_vundle
+  end
+
+  desc 'Install powerline-shell'
+  task :powerline_shell do
+    puts 'installing powerline shell'
+    `cp -f powerline-shell/config.py.dist powerline-shell/config.py`
+    `./powerline-shell/install.py`
+    `ln -nfs "#{ENV["PWD"]}/powerline-shell/powerline-shell.py" "#{ENV["HOME"]}/powerline-shell.py"`
   end
 
   desc 'Install rvm binstubs'
