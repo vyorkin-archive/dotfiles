@@ -93,13 +93,9 @@ set sidescroll=1
 " ================ Colors ===========================
 set t_Co=256
 set background=dark
-colorscheme Tomorrow-Night-Bright
+colorscheme solarized
 
 set cursorline
-
-hi! ColorColumn guibg=#121212 ctermbg=233
-hi! CursorLine guibg=#121212 ctermbg=233 cterm=NONE gui=NONE
-hi! CursorColumn guibg=#121212 ctermbg=233 cterm=NONE gui=NONE
 
 if has("gui_running")
   " Show tab number (useful for Cmd-1, Cmd-2.. mapping)
