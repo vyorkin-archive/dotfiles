@@ -1,3 +1,6 @@
+if !has("gui_macvim")
+  set t_Co=256
+endif
 
 hi! link txtBold Identifier
 hi! link zshVariableDef Identifier
@@ -41,39 +44,24 @@ hi! link htmlTagName Type
 
 hi! PreProc gui=bold
 
-hi! Search guibg=#5fafdf cterm=NONE term=NONE ctermbg=74
-
-" Separators are a little garish.
+" Solarized separators are a little garish.
 " This moves separators, comments, and normal
 " text into the same color family as the background.
 " Using the http://drpeterjones.com/colorcalc/,
 " they are now just differently saturated and
 " valued riffs on the background color, making
 " everything play together just a little more nicely.
-hi! VertSplit guibg=#080808 guifg=#1c1c1c cterm=NONE term=NONE ctermfg=234 ctermbg=232
-
-"Invisible character colors
-" hi! NonText guifg=#121212 ctermfg=232 ctermbg=232
-" hi! SpecialKey guifg=#121212 ctermfg=232 ctermbg=232
-
-hi! LineNR guifg=#262626 ctermbg=232 gui=NONE term=NONE guibg=#080808 ctermfg=235
+hi! VertSplit guifg=#003745 cterm=NONE term=NONE ctermfg=NONE ctermbg=NONE
+hi! LineNR guifg=#004C60 gui=bold guibg=#002B36 ctermfg=146
 hi! link NonText VertSplit
-hi! Constant guifg=#00df5f ctermfg=41 term=NONE gui=NONE
-hi! Statement gui=NONE term=NONE
-hi! Comment gui=NONE term=NONE guifg=#3A3A3A ctermfg=237
+hi! Normal guifg=#77A5B1
+hi! Constant guifg=#00BCE0
+hi! Comment guifg=#52737B
 hi! link htmlLink Include
+hi! CursorLine cterm=NONE gui=NONE
 hi! Visual ctermbg=233
-hi! EasyMotionTarget guifg=#5fdf00 ctermfg=76 gui=bold cterm=bold
-hi! SignColumn ctermbg=232 ctermfg=29 guibg=#080808 guifg=#00875f
+hi! Type gui=bold
+hi! EasyMotionTarget guifg=#4CE660 gui=bold
 
-hi! ColorColumn guibg=#1c1c1c ctermbg=234
-hi! CursorLine guibg=#1c1c1c ctermbg=234 cterm=NONE gui=NONE
-hi! CursorColumn guibg=#1c1c1c ctermbg=234 cterm=NONE gui=NONE
-
-highlight DiffAdd     cterm=NONE ctermbg=22 gui=NONE guibg=#005f00
-highlight DiffDelete  cterm=NONE ctermbg=234 ctermfg=0 gui=NONE guifg=#000000 guibg=#1c1c1c
-highlight DiffText    cterm=NONE ctermbg=237 gui=NONE guibg=#3a3a3a
-highlight DiffChange  cterm=NONE ctermbg=235 gui=NONE guibg=#262626
-
-" Enforce the colors set here
+" Make sure this file loads itself on top of any other color settings
 au VimEnter * so ~/.vim/plugin/settings/colors.vim
