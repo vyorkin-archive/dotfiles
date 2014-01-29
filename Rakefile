@@ -38,7 +38,7 @@ namespace :install do
       pry-git awesome_print sketches
       hirb hirb-unicode pry-stack_explorer
       pry-rails pry-theme coolline coderay
-      gist jist gas gas_stats
+      gist jist gas gas_stats interactive_editor
     )
     gem i #{gems.join(' ')}`
 
@@ -142,7 +142,7 @@ namespace :symlink do
   desc 'Symlink all dotfiles'
   task :all do
     %w(
-      bash infrastructure git zsh tmux
+      bash ruby infrastructure git zsh tmux
       vim oh_my_zsh dotpryrc zsh_pure
     ).each do |t|
       Rake::Task["symlink:#{t}"].invoke
@@ -158,8 +158,13 @@ namespace :symlink do
   task :infrastructure do
     make_symlinks(%w(
       .dotfiles .aprc .cabal .cheat .ctags
-      .curlrc .gemrc .ghci .htoprc .irssi
+      .curlrc .ghci .htoprc .irssi
     ))
+  end
+
+  desc 'Symlink ruby dotfiles'
+  task :ruby do
+    make_symlinks(%w(.gemrc .irbrc))
   end
 
   desc 'Symlink git dotfiles'
