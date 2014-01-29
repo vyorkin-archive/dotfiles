@@ -42,8 +42,8 @@ namespace :install do
     )
     gem i #{gems.join(' ')}`
 
-    `gem i byebug minitest-byebug`
     `gem i pry-byebug --version 1.1.1`
+    `gem i minitest-byebug`
   end
 
   desc 'Runs Vundle installer in a clean vim environment'
