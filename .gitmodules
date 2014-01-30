@@ -28,3 +28,6 @@
 [submodule "powerline-shell"]
 	path = powerline-shell
 	url = https://github.com/milkbikis/powerline-shell
+[submodule ".antigen"]
+	path = .antigen
+	url = https://github.com/zsh-users/antigen.git

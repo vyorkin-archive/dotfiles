@@ -1,0 +1,53 @@
+source $HOME/.antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle ant
+antigen bundle fasd
+antigen bundle bower
+antigen bundle battery
+antigen bundle brew
+antigen bundle bundler
+antigen bundle capistrano
+antigen bundle cabal
+antigen bundle coffee
+antigen bundle docker
+antigen bundle cp
+antigen bundle gem
+antigen bundle git
+antigen bundle github
+antigen bundle heroku
+antigen bundle history
+antigen bundle history-substring-search
+antigen bundle jruby
+antigen bundle knife
+antigen bundle lein
+antigen bundle node
+antigen bundle npm
+antigen bundle osx
+antigen bundle perl
+antigen bundle python
+antigen bundle rails
+antigen bundle rake
+antigen bundle rsync
+antigen bundle ruby
+antigen bundle rvm
+antigen bundle scala
+antigen bundle sublime
+antigen bundle tmux
+antigen bundle tmuxinator
+antigen bundle torrent
+antigen bundle vagrant
+antigen bundle vundle
+antigen bundle redis-cli
+antigen bundle web-search
+antigen bundle zeus
+antigen bundle jimhester/per-directory-history
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle bobthecow/git-flow-completion
+#antigen bundle arialdomartini/oh-my-git
+#antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
+
+antigen apply
+
+

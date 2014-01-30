@@ -13,34 +13,54 @@ end
 namespace :install do
   desc 'Install all'
   task :all do
-    Rake::Task['update_submodules'].invoke
-    Rake::Task['symlink:all'].invoke
-    %w(
-      vundle gems packages rvm_binstubs
-      powerline_shell
-    ).each do |t|
-      Rake::Task["install:#{t}"].invoke
-    end
+    run 'update_submodules', 'symlink:all'
+    %w(vundle gems packages rvm_binstubs powerline_shell)
+      .each { |t| run "install:#{t}" }
 
     set_zsh_as_default_shell
+
+    if platform_is_darwin?
+      %(vagrant vagrant_plugins).each { |t| run "install:#{t}" }
+    end
+  end
+
+  desc 'Install vagrant and plugins'
+  task :vagrant do
+    `which vagrant`
+    `brew cask install vagrant` unless $?.success?
+  end
+
+  desc 'Install vagrant plugins'
+  task :vagrant_plugins do
+    %w(
+      vagrant-omnibus vagrant-berkshelf
+      sahara vagrant-cachier vagrant-vmware-fusion
+    ).each do |p|
+      `vagrant plugin install #{p}`
+    end
+
+    `gem i librarian-chef berkshelf`
   end
 
   desc 'Install packages'
   task :packages do
-    task_name = platform_is_darwin? ? 'darwin:setup' : 'linux:setup'
-    Rake::Task[task_name].invoke
+    run(platform_is_darwin? ? 'darwin:setup' : 'linux:setup')
   end
 
   desc 'Install gems'
   task :gems do
+    `gem i bundle`
+    `bundle config --global jobs $(sysctl -n hw.ncpu)`
+
     gems = %w(
       ghi pry pry-remote pry-doc
       pry-git awesome_print sketches
-      hirb hirb-unicode pry-stack_explorer
-      pry-rails pry-theme coolline coderay
+      hirb hirb-unicode pry-stack_explorer coolline
+      pry-coolline pry-rails pry-theme pry-vterm_aliases coderay
       gist jist gas gas_stats interactive_editor
+      foreman
     )
-    gem i #{gems.join(' ')}`
+    `gem i #{gems.join(' ')}`
 
     `gem i pry-byebug --version 1.1.1`
     `gem i minitest-byebug`
@@ -78,10 +98,16 @@ end
 namespace :linux do
   desc 'Install linux usefull packages'
   task :setup do
-    # TODO: add silver_searher (see README in its repo)
+    # TODO: add the_silver_searher (see README in its repo)
     #`sudo apt-get update`
     #`sudo apt-get upgrade`
     `sudo apt-get install --fix-missing -y -qq zsh ctags tmux`
+  end
+
+  desc 'Install heroku toolbelt and plugins'
+  task :install_heroku do
+    `wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh`
+    init_heroku
   end
 end
 
@@ -89,13 +115,15 @@ namespace :darwin do
   desc 'Install mac os x package manager & usefull packages'
   task :setup do
     `which brew`
-    Rake::Task['darwin:homebrew:install'].invoke unless $?.success?
-    %w(update install_packages).each do |t|
-      Rake::Task["darwin:homebrew:#{t}"].invoke
-    end
-    %w(install_fonts install_iterm_themes).each do |t|
-      Rake::Task["darwin:#{t}"].invoke
-    end
+    run 'darwin:homebrew:install' unless $?.success?
+    %w(update install_packages).each { |t| run "darwin:homebrew:#{t}" }
+    %w(install_fonts install_iterm_themes).each { |t| run "darwin:#{t}" }
+  end
+
+  desc 'Install heroku toolbelt and plugins'
+  task :install_heroku do
+    `brew install heroku-toolbelt`
+    init_heroku
   end
 
   desc 'Install custom fonts for mac os x'
@@ -132,7 +160,12 @@ namespace :darwin do
     desc 'Install packages'
     task :install_packages do
       puts 'installing required homebrew packages'
-      `brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher fasd git-flow git-extras`
+      `brew tap phinze/cask; brew install brew-cask`
+      packages = %w(
+        zsh ctags git hub tmux reattach-to-user-namespace
+        the_silver_searcher fasd git-flow git-extras autoenv watch
+      )
+      `brew install #{packages.join(' ')}`
       puts
     end
   end
@@ -141,12 +174,8 @@ end
 namespace :symlink do
   desc 'Symlink all dotfiles'
   task :all do
-    %w(
-      bash ruby infrastructure git zsh tmux
-      vim oh_my_zsh dotpryrc zsh_pure
-    ).each do |t|
-      Rake::Task["symlink:#{t}"].invoke
-    end
+    %w(bash ruby infrastructure git zsh tmux vim oh_my_zsh dotpryrc zsh_pure)
+      .each { |t| run "symlink:#{t}" }
   end
 
   desc 'Symlink bash dotfiles'
@@ -178,7 +207,10 @@ namespace :symlink do
 
   desc 'Symlink zsh dotfiles'
   task :zsh do
-    make_symlinks(%w(.zlogin .zlogout .zprofile .zshenv .zshrc))
+    make_symlinks(%w(
+      .zlogin .zlogout .zprofile .zshenv
+      .zshrc .antigen .powerline-shell .antigen-bundler
+    ))
   end
 
   desc 'Symlink tmux dotfiles'
@@ -220,6 +252,10 @@ def set_zsh_as_default_shell
   `chsh -s /bin/zsh`
 end
 
+def init_heroku
+  `heroku login`
+  `heroku plugins:install git://github.com/ddollar/heroku-config.git`
+end
 
 def iterm_available_themes
   Dir['iterm/**/*.itermcolors'].map do |filename|
@@ -266,6 +302,10 @@ def make_symlinks(map)
     puts "[Ok]"
     puts
   end
+end
+
+def run(*tasks)
+  tasks.flatten.each { |t| Rake::Task[t].invoke }
 end
 
 task :default => 'install:all'

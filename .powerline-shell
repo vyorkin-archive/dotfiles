@@ -1,0 +1,23 @@
+# Optional args:
+#  --cwd-only            Only show the current directory
+#  --cwd-max-depth CWD_MAX_DEPTH
+#                        Maximum number of directories to show in path
+#  --colorize-hostname   Colorize the hostname based on a hash of itself.
+#  --mode {patched,compatible,flat}
+#                        The characters used to make separators between
+#                        segments
+function powerline_precmd() {
+  export PS1="$(~/powerline-shell.py --cwd-only $? --shell zsh 2> /dev/null)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+install_powerline_precmd
+
