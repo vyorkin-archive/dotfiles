@@ -53,13 +53,12 @@ namespace :install do
     `bundle config --global jobs $(sysctl -n hw.ncpu)`
 
     gems = %w(
-      ghi pry pry-remote pry-doc
-      pry-git awesome_print sketches
+      ghi pry pry-remote pry-doc pry-git awesome_print sketches
       hirb hirb-unicode pry-stack_explorer coolline
       pry-coolline pry-rails pry-theme pry-vterm_aliases coderay
-      gist jist gas gas_stats interactive_editor
-      foreman
+      gist jist interactive_editor foreman
     )
+    `gem i gas gas_stats`
     `gem i #{gems.join(' ')}`
 
     `gem i pry-byebug --version 1.1.1`
