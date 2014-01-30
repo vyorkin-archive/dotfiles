@@ -13,8 +13,8 @@ alias -g S='| sort'
 alias -g G='| grep'
 
 alias ll='ls -l'
-alias lla='ls -la'
-alias la='ls -a'
+alias lla='ls -lA'
+alias la='ls -A'
 
 # Keys
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> copied'"
@@ -101,7 +101,7 @@ alias va='vagrant up --provider=vmware_fusion --no-provision'
 alias vagh='vagrant halt'
 alias vags='vagrant suspend'
 alias vagr='vagrant resume'
-alias vagrs='vagrant restart'
+alias vagrs='vagrant reload'
 alias vagd='vagrant destroy'
 alias vagssh='vagrant ssh'
 alias vagstat='vagrant status'

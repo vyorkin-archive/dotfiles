@@ -237,6 +237,7 @@ namespace :symlink do
 
   desc 'Symlink zsh pure submodule'
   task :zsh_pure do
+    `sudo chmod u=rwx,g=rwx,o=rwx -R /usr/local/share/zsh/site-functions/`
     `ln -nfs "#{ENV["PWD"]}/pure/pure.zsh" "/usr/local/share/zsh/site-functions/prompt_pure_setup"`
   end
 end
