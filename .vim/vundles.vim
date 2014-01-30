@@ -85,7 +85,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kien/ctrlp.vim'
-" Bundle 'majutsushi/tagbar'
+Bundle 'majutsushi/tagbar'
 " Bundle 'mattn/webapi-vim'
 Bundle 'rking/ag.vim'
 Bundle 'dsummersl/gundo.vim'
@@ -157,7 +157,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'jeroenbourgois/vim-actionscript'
 Bundle 'guns/xterm-color-table.vim'
 
-" Bundle 'Zuckonit/vim-airline-tomato'
+Bundle 'Zuckonit/vim-airline-tomato'
 " Bundle 'FredKSchott/CoVim'
 
 "Filetype plugin indent on is required by vundle
