@@ -145,7 +145,7 @@ Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-vividchalk'
 
-" Bundle 'airblade/vim-gitgutter'
+Bundle 'airblade/vim-gitgutter'
 " Bundle 'benmills/vimux'
 " Bundle 'jgdavey/tslime.vim'
 " Bundle 'mattn/emmet-vim'
