@@ -14,7 +14,7 @@ windows:
         - console:
           - vagssh
           -  cd /apps/football-cc
-          - sleep 2 && zeus c
+          - sleep 4 && zeus c
         - test:
           - vagssh
           - cd /apps/football-cc
@@ -43,4 +43,4 @@ windows:
         - server:
           - vagssh
           - cd /apps/football-cc
-          - sleep 2 && zeus s
+          - sleep 4 && zeus s

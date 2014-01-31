@@ -14,7 +14,7 @@ windows:
         - console:
           - vagssh
           -  cd /apps/control-center
-          - sleep 2 && zeus c
+          - sleep 4 && zeus c
         - test:
           - vagssh
           - cd /apps/control-center
@@ -43,4 +43,4 @@ windows:
         - server:
           - vagssh
           - cd /apps/control-center
-          - sleep 2 && zeus s
+          - sleep 4 && zeus s
