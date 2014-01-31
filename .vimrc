@@ -106,9 +106,9 @@ if has("gui_running")
   set lines=72
   set columns=200
 
-  " set guifont=Inconsolata\ XL:h12,Inconsolata:h12,Monaco:h13
-  " set fuopt+=maxhorz
-  " set fu
+  set guifont=Menlo:h12
+  set fuopt+=maxhorz
+  set fu
 else
   "dont load csapprox if we no gui support - silences an annoying warning
   let g:CSApprox_loaded = 1
