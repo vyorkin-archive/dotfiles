@@ -6,3 +6,4 @@ PATH=$PATH:$HOME/.rvm/bin:$HOME/bin:/Applications/VMware\ Fusion.app/Contents/Li
 export LANG=en_US.UTF-8
 export LC_ALL=$LANG
 
+source ~/.secret_tokens

@@ -206,8 +206,9 @@ namespace :symlink do
 
   desc 'Symlink zsh dotfiles'
   task :zsh do
+    `touch .secret_tokens`
     make_symlinks(%w(
-      .zlogin .zlogout .zprofile .zshenv
+      .zlogin .zlogout .zprofile .zshenv .secret_tokens
       .zshrc .antigen .powerline-shell .antigen-bundler
     ))
   end
