@@ -1,16 +1,46 @@
 # ~/.tmuxinator/.yml
-# you can make as many tabs as you wish...
 
 name: Sochi
 root: ~/programming/work/football-cc-vagrant/apps/control-center
 socket_name: tmux_football
-# pre_window: rvm use 2.0.0 & clear 
-# tmux_options: -2
 windows:
   - main:
       layout: 3c9d,363x81,0,0[364x52,0,0{181x52,0,0,0,182x52,182,0,1},364x28,0,53,2]
       panes:
-        - tail -f log/development.log
-        - vagssh
-        - git branch
-  - console: vagssh
+        - zeus:
+          - vagssh
+          - cd /apps/control-center
+          - zeus start
+        - console:
+          - vagssh
+          -  cd /apps/control-center
+          - sleep 2 && zeus c
+        - test:
+          - vagssh
+          - cd /apps/control-center
+  - dev:
+      layout: 3c9d,363x81,0,0[364x52,0,0{181x52,0,0,0,182x52,182,0,1},364x28,0,53,2]
+      panes:
+        - test:
+          - vagssh
+          - cd /apps/control-center
+        - editor:
+          - vim
+        - git:
+          - mvim
+          - git branch
+  - server:
+      layout: 3c9d,363x81,0,0[364x52,0,0{181x52,0,0,0,182x52,182,0,1},364x28,0,53,2]
+      panes:
+        - testlog:
+          - vagssh
+          - cd /apps/control-center
+          - tail -f log/test.log
+        - devlog:
+          - vagssh
+          - cd /apps/control-center
+          - tail -f log/development.log
+        - server:
+          - vagssh
+          - cd /apps/control-center
+          - sleep 2 && zeus s

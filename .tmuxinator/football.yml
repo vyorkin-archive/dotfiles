@@ -1,5 +1,4 @@
 # ~/.tmuxinator/.yml
-# you can make as many tabs as you wish...
 
 name: Football
 root: ~/programming/work/football-cc-vagrant/apps/football-cc
@@ -10,15 +9,15 @@ windows:
       panes:
         - zeus:
           - vagssh
-          -  cd /apps/football-cc
+          - cd /apps/football-cc
           - zeus start
         - console:
           - vagssh
           -  cd /apps/football-cc
-          - zeus c
+          - sleep 2 && zeus c
         - test:
           - vagssh
-          -  cd /apps/football-cc
+          - cd /apps/football-cc
   - dev:
       layout: 3c9d,363x81,0,0[364x52,0,0{181x52,0,0,0,182x52,182,0,1},364x28,0,53,2]
       panes:
@@ -44,4 +43,4 @@ windows:
         - server:
           - vagssh
           - cd /apps/football-cc
-          - zeus s
+          - sleep 2 && zeus s

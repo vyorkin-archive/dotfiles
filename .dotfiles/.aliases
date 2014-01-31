@@ -53,10 +53,7 @@ alias sgi='sudo gem install --no-ri --no-rdoc'
 alias todo='open nvalt://find/todo'
 
 # Tmux
-alias mls="tmux ls"
-alias mrs="tmux attach-session -t $*"
-alias msa="tmux $*"
-alias mks="tmux killscreen"
+alias tk='tmux kill-session -t'
 
 # Tmuxinator
 alias muxl="mux list"
