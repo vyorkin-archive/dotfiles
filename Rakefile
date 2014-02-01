@@ -240,6 +240,7 @@ namespace :symlink do
   task :zsh_pure do
     `sudo chmod u=rwx,g=rwx,o=rwx -R /usr/local/share/zsh/site-functions/`
     `ln -nfs "#{ENV["PWD"]}/pure/pure.zsh" "/usr/local/share/zsh/site-functions/prompt_pure_setup"`
+    `sudo chmod -R 755 /usr/local/share/zsh/site-functions`
   end
 end
 
