@@ -13,7 +13,7 @@ windows:
           - zeus start
         - console:
           - vagssh
-          -  cd /apps/control-center
+          - cd /apps/control-center
           - sleep 4 && zeus c
         - test:
           - vagssh
