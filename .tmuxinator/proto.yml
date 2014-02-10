@@ -1,8 +1,8 @@
 # ~/.tmuxinator/.yml
 
-name: Sochi
-root: ~/programming/work/football-cc-vagrant/apps/control-center
-socket_name: tmux_sochi
+name: Proto
+root: ~/github/proto
+socket_name: tmux_proto
 windows:
   - main:
       layout: 3c9d,363x81,0,0[364x52,0,0{181x52,0,0,0,182x52,182,0,1},364x28,0,53,2]
@@ -11,8 +11,15 @@ windows:
           - zeus start
         - console:
           - sleep 4 && zeus c
-        - test:
-          -
+        - server:
+          - sleep 4 && zeus s Puma
+  - logs:
+      layout: main-vertical
+      panes:
+        - testlog:
+          - tail -f log/test.log
+        - devlog:
+          - tail -f log/development.log
   - dev:
       layout: 3c9d,363x81,0,0[364x52,0,0{181x52,0,0,0,182x52,182,0,1},364x28,0,53,2]
       panes:
@@ -23,12 +30,3 @@ windows:
         - git:
           - mvim
           - git branch
-  - server:
-      layout: 3c9d,363x81,0,0[364x52,0,0{181x52,0,0,0,182x52,182,0,1},364x28,0,53,2]
-      panes:
-        - testlog:
-          - tftl
-        - devlog:
-          - tfdl
-        - server:
-          - zeus s
