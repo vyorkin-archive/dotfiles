@@ -28,7 +28,7 @@ Bundle 'vim-ruby/vim-ruby'
 " Bundle 'thoughtbot/vim-rspec'
 " Bundle 'tpope/vim-cucumber'
 Bundle 'sunaku/vim-ruby-minitest'
-Bundle 'ngmy/vim-rubocop'
+" Bundle 'ngmy/vim-rubocop'
 
 " Other languages
 " Bundle 'briancollins/vim-jst'
@@ -39,6 +39,12 @@ Bundle 'pangloss/vim-javascript'
 " Bundle 'vim-scripts/JSON.vim'
 " Bundle 'vim-perl/vim-perl'
 " Bundle 'zaiste/VimClojure'
+
+" Haskell
+Bundle 'dag/vim2hs'
+
+" Erlang
+Bundle 'jimenezrick/vimerl'
 
 " Html, Xml, Css, Markdown...
 " Bundle 'skammer/vim-css-color'
@@ -55,7 +61,7 @@ Bundle 'kchmck/vim-coffee-script'
 " Bundle 'gregsexton/VimCalc'
 
 " Git related...
-Bundle 'gregsexton/gitv'
+" Bundle 'gregsexton/gitv'
 " Bundle 'mattn/gist-vim'
 " Bundle 'skwp/vim-git-grep-rails-partial'
 " Bundle 'tjennings/git-grep-vim'
@@ -67,10 +73,13 @@ Bundle 'tpope/vim-git'
 " Bundle 'Raimondi/delimitMate'
 
 " Bundle 'briandoll/change-inside-surroundings.vim'
+
+" Snipmate & snippets
 " Bundle 'garbas/vim-snipmate'
 " Bundle 'scrooloose/snipmate-snippets'
 " Bundle 'honza/vim-snippets'
-" Bundle 'godlygeek/tabular'
+
+Bundle 'godlygeek/tabular'
 " Bundle 'myusuf3/numbers.vim'
 
 " Bundle 'vim-scripts/IndexedSearch'
@@ -81,12 +90,23 @@ Bundle 'tpope/vim-git'
 Bundle 'terryma/vim-multiple-cursors'
 
 " General vim improvements
+Bundle 'vim-scripts/vim-auto-save'
+Bundle 'airblade/vim-gitgutter'
 " Bundle 'MarcWeber/vim-addon-mw-utils'
 " Bundle 'bogado/file-line'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kien/ctrlp.vim'
+
+" Completion & vim shell
+Bundle 'Shougo/neocomplete.vim'
+Bundle 'Shougo/neosnippet.vim'
+Bundle 'Shougo/neosnippet-snippets'
+Bundle 'Shougo/vimproc.vim'
+
+" Ctags
 Bundle 'majutsushi/tagbar'
+
 " Bundle 'mattn/webapi-vim'
 Bundle 'rking/ag.vim'
 Bundle 'dsummersl/gundo.vim'
@@ -95,7 +115,7 @@ Bundle 'dsummersl/gundo.vim'
 " Bundle 'skwp/greplace.vim'
 " Bundle 'vim-scripts/Conque-Shell'
 " Bundle 'tomtom/tlib_vim'
-" Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
@@ -104,7 +124,7 @@ Bundle 'tpope/vim-unimpaired'
 " Bundle 'vim-scripts/AutoTag'
 " Bundle 'vim-scripts/lastpos.vim'
 " Bundle 'vim-scripts/sudo.vim'
-Bundle 'xsunsmile/showmarks'
+" Bundle 'xsunsmile/showmarks'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
 " Bundle 'xolox/vim-easytags'
@@ -113,10 +133,11 @@ Bundle 'xolox/vim-session'
 " Bundle 'austintaylor/vim-indentobject'
 " Bundle 'bootleq/vim-textobj-rubysymbol'
 " Bundle 'coderifous/textobj-word-column.vim'
-" Bundle 'kana/vim-textobj-datetime'
-" Bundle 'kana/vim-textobj-entire'
-" Bundle 'kana/vim-textobj-function'
-" Bundle 'kana/vim-textobj-user'
+Bundle 'kana/vim-textobj-datetime'
+Bundle 'kana/vim-textobj-entire'
+Bundle 'kana/vim-textobj-function'
+Bundle 'kana/vim-textobj-user'
+Bundle 'kana/vim-textobj-indent'
 " Bundle 'lucapette/vim-textobj-underscore'
 " Bundle 'nelstrom/vim-textobj-rubyblock'
 " Bundle 'thinca/vim-textobj-function-javascript'
@@ -146,7 +167,6 @@ Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-vividchalk'
 
-Bundle 'airblade/vim-gitgutter'
 " Bundle 'benmills/vimux'
 " Bundle 'jgdavey/tslime.vim'
 " Bundle 'mattn/emmet-vim'
@@ -159,7 +179,7 @@ Bundle 'jeroenbourgois/vim-actionscript'
 Bundle 'guns/xterm-color-table.vim'
 
 Bundle 'Zuckonit/vim-airline-tomato'
-" Bundle 'FredKSchott/CoVim'
+Bundle 'FredKSchott/CoVim'
 
 "Filetype plugin indent on is required by vundle
 filetype plugin indent on
