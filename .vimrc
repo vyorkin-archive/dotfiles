@@ -22,8 +22,6 @@ set hidden
 " turn on syntax highlighting
 syntax on
 
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all
 " the plugins.
 let mapleader=","
@@ -159,8 +157,8 @@ au VimResized * :wincmd =
 set pastetoggle=<F2>
 
 " Current date and time
-nnoremap <F6> "=strftime("%Y-%m-%d %H:%M")<CR>P
-inoremap <F6> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
+nnoremap <F5> "=strftime("%Y-%m-%d %H:%M")<CR>P
+inoremap <F5> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
 
 au FocusLost * :wa
 
