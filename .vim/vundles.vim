@@ -130,6 +130,7 @@ Bundle 'xolox/vim-session'
 " Bundle 'xolox/vim-easytags'
 
 " Text objects
+Bundle 'tpope/vim-jdaddy'
 " Bundle 'austintaylor/vim-indentobject'
 " Bundle 'bootleq/vim-textobj-rubysymbol'
 " Bundle 'coderifous/textobj-word-column.vim'
@@ -154,6 +155,7 @@ Bundle 'edkolev/tmuxline.vim'
 " Bundle 'itchyny/lightline.vim'
 
 " Color schemes
+Bundle 'noahfrederick/vim-hemisu'
 Bundle 'endel/vim-github-colorscheme'
 Bundle 'chriskempson/tomorrow-theme'
 Bundle 'flazz/vim-colorschemes'
