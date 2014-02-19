@@ -22,6 +22,7 @@ nnoremap <Esc>p :ClearCtrlPCache<cr>
 " more likely to find the correct thing first. mnemonic 'jump to [something]'
 map ,jm :CtrlP app/models<CR>
 map ,jc :CtrlP app/controllers<CR>
+map ,ja :CtrlP app/api<CR>
 map ,jv :CtrlP app/views<CR>
 map ,jh :CtrlP app/helpers<CR>
 
@@ -29,7 +30,6 @@ map ,j1 :CtrlP app/forms<CR>
 map ,j2 :CtrlP app/serializers<CR>
 map ,j3 :CtrlP app/mailers<CR>
 
-map ,ja :CtrlP  app/assets<CR>
 map ,jaj :CtrlP app/assets/javascripts<CR>
 map ,jas :CtrlP app/assets/stylesheets<CR>
 

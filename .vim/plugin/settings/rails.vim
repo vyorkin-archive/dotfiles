@@ -23,6 +23,12 @@ let g:rails_projections = {
       \    "related": "app/moodels/%s.rb",
       \    "affinity": "model"
       \ },
+      \ "app/api/*s.rb": {
+      \    "command": "api",
+      \    "template": "class %Ss\nend",
+      \    "related": "app/api/%s.rb",
+      \    "affinity": "model"
+      \ },
       \ "app/serializers/*_serializer.rb": {
       \    "command": "serializer",
       \    "template": "class %Sserializer\nend",
