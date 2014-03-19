@@ -27,9 +27,3 @@ end tell
 EOF
 }
 
-function dev() {
-  vpn-connect "nest.undev.ru (VPN)"
-}
-function undev() {
-  vpn-disconnect "nest.undev.ru (VPN)"
-}

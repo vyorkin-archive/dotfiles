@@ -117,7 +117,10 @@ channels = (
   { name = "#hackage"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#rubyonrails"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#erlang"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#pry"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#pry"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#angularjs"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#sidekiq"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ansible"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
