@@ -60,6 +60,7 @@ filetype indent on
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
+autocmd filetype html,xml set listchars-=tab:>.
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points

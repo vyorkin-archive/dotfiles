@@ -59,5 +59,7 @@ hi! Visual ctermbg=233
 hi! Type gui=bold
 hi! EasyMotionTarget guifg=#4CE660 gui=bold
 
+hi! SignColumn ctermbg=8 guibg=#002B36
+
 " Make sure this file loads itself on top of any other color settings
 au VimEnter * so ~/.vim/plugin/settings/colors.vim

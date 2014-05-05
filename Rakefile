@@ -54,7 +54,7 @@ namespace :install do
 
     gems = %w(
       ghi pry pry-remote pry-doc pry-git awesome_print sketches
-      hirb hirb-unicode pry-stack_explorer coolline
+      hirb hirb-unicode pry-stack_explorer coolline rubocop
       pry-coolline pry-rails pry-theme pry-vterm_aliases
       coderay pry-rescue gist jist interactive_editor foreman
     )
