@@ -92,7 +92,7 @@ set sidescroll=1
 " ================ Colors ===========================
 set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme badwolf
 
 set cursorline
 

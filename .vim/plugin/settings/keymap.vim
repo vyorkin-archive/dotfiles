@@ -1,6 +1,9 @@
 " ========================================
 " General vim sanity improvements
 " ========================================
+
+" Use 'gm' for add mark instead of 'm'
+nnoremap gm m
 "
 " alias yw to yank the entire word 'yank inner word'
 " even if the cursor is halfway inside the word

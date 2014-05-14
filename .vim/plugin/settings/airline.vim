@@ -8,7 +8,8 @@ let g:airline_readonly_symbol = '⭤'
 let g:airline_linecolumn_prefix = '⭡'
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme="solarized"
+" let g:airline_theme="solarized"
+let g:airline_theme="badwolf"
 
 let g:airline_section_y = rvm#statusline()
 let g:airline_section_z = ''
