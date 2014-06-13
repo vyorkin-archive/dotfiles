@@ -62,4 +62,3 @@ export DOTFILES=$HOME/.dotfiles
 source $DOTFILES/.functions
 source $DOTFILES/.aliases
 source $DOTFILES/.git-aliases
-

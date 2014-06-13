@@ -31,6 +31,3 @@
 [submodule ".antigen"]
 	path = .antigen
 	url = https://github.com/zsh-users/antigen.git
-[submodule "betty"]
-	path = betty
-	url = https://github.com/pickhardt/betty
