@@ -1,0 +1,141 @@
+snippet cs
+var cx = React.addons.classSet;
+endsnippet
+
+snippet cdm
+componentDidMount: function() {
+	${1}
+},
+endsnippet
+
+snippet cdup
+componentDidUpdate: function(prevProps, prevState) {
+	${1}
+},
+endsnippet
+
+snippet cwm
+componentWillMount: function() {
+	${1}
+},
+endsnippet
+
+snippet cwr
+componentWillReceiveProps: function(nextProps) {
+	${1}
+},
+endsnippet
+
+snippet cwun
+componentWillUnmount: function() {
+	${1}
+},
+endsnippet
+
+snippet cwu
+componentWillUpdate: function(nextProps, nextState) {
+	${1}
+},
+endsnippet
+
+snippet cx
+cx({
+	${1}: ${2}
+});
+endsnippet
+
+snippet fup
+forceUpdate(${1:callback});
+endsnippet
+
+snippet gdp
+getDefaultProps: function() {
+	return {
+		${1}
+	};
+},
+endsnippet
+
+snippet gis
+getInitialState: function() {
+	return {
+		${1}: ${2}
+	};
+},
+endsnippet
+
+snippet ism
+isMounted()
+endsnippet
+
+snippet jsx
+/**
+ * @jsx React.DOM
+ */
+endsnippet
+
+snippet pt
+propTypes: {
+	${1}: React.PropTypes.${2:string}
+},
+endsnippet
+
+snippet rcc
+/**
+ * @jsx React.DOM
+ */
+
+var React = require('React');
+
+var ${1:ClassName} = React.createClass({
+
+	render: function() {
+		return (
+			${0:<div />}
+		);
+	}
+
+});
+
+module.exports = $1;
+endsnippet
+
+snippet ren
+render: function() {
+	return (
+		${1:<div />}
+	);
+}
+endsnippet
+
+snippet sst
+setState({
+	${1}: ${2}
+});
+endsnippet
+
+snippet scu
+shouldComponentUpdate: function(nextProps, nextState) {
+	${1}
+},
+endsnippet
+
+snippet props
+this.props.${1}
+endsnippet
+
+snippet state
+this.state.${1}
+endsnippet
+
+snippet trp
+transferPropsTo(${1});
+endsnippet
+
+snippet rt "react template for playground" b
+/*** @jsx React.DOM */
+var APP = React.createClass({
+	${1:yourShittyCode}
+});
+React.renderComponent(<APP val={0} />, document.body)
+endsnippet
