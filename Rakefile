@@ -18,38 +18,16 @@ namespace :install do
       .each { |t| run "install:#{t}" }
 
     set_zsh_as_default_shell
-
-    if platform_is_darwin?
-      %(vagrant vagrant_plugins).each { |t| run "install:#{t}" }
-    end
-  end
-
-  desc 'Install vagrant and plugins'
-  task :vagrant do
-    `which vagrant`
-    `brew cask install vagrant` unless $?.success?
-  end
-
-  desc 'Install vagrant plugins'
-  task :vagrant_plugins do
-    %w(
-      vagrant-omnibus vagrant-berkshelf
-      sahara vagrant-cachier vagrant-vmware-fusion
-    ).each do |p|
-      `vagrant plugin install #{p}`
-    end
-
-    `gem i librarian-chef berkshelf`
   end
 
   desc 'Install packages'
   task :packages do
-    run(platform_is_darwin? ? 'darwin:setup' : 'linux:setup')
+    run "#{platform_name}:setup"
   end
 
   desc 'Install gems'
   task :gems do
-    `gem i bundle`
+    `gem i bundle -v`
     `bundle config --global jobs $(sysctl -n hw.ncpu)`
 
     gems = %w(
@@ -58,11 +36,11 @@ namespace :install do
       pry-coolline pry-rails pry-theme pry-vterm_aliases
       coderay pry-rescue gist jist interactive_editor foreman
     )
-    `gem i gas gas_stats`
-    `gem i #{gems.join(' ')}`
+    `gem i gas gas_stats -v`
+    `gem i #{gems.join(' ')} -v`
 
-    `gem i pry-byebug --version 1.1.1`
-    `gem i minitest-byebug`
+    `gem i pry-byebug --version 1.1.1 -v`
+    `gem i minitest-byebug -v`
   end
 
   desc 'Runs Vundle installer in a clean vim environment'
@@ -159,7 +137,10 @@ namespace :darwin do
     desc 'Install packages'
     task :install_packages do
       puts 'installing required homebrew packages'
-      `brew tap phinze/cask; brew install brew-cask`
+
+      `brew tap phinze/cask`
+      `brew install brew-cask`
+
       packages = %w(
         zsh ctags git hub tmux reattach-to-user-namespace
         the_silver_searcher fasd git-flow git-extras autoenv watch
@@ -185,8 +166,8 @@ namespace :symlink do
   desc 'Symlink infrastructure dotfiles (htop, irssi, etc)'
   task :infrastructure do
     make_symlinks(%w(
-      .dotfiles .aprc .cabal .cheat .ctags
-      .curlrc .ghci .htoprc .irssi
+      .dotfiles .aprc .cabal .cheat .ctags .kerlrc
+      .curlrc .ghci .htoprc .irssi .slate .octave
     ))
   end
 
@@ -225,7 +206,7 @@ namespace :symlink do
 
   desc 'Symlink oh_my_zsh submodule'
   task :oh_my_zsh do
-    make_symlinks({'oh-my-zsh' => '.oh-my-zsh'})
+    make_symlinks('oh-my-zsh' => '.oh-my-zsh')
   end
 
   desc 'Symlink dotpryrc submodule'
@@ -248,6 +229,10 @@ private
 
 def platform_is_darwin?
   RUBY_PLATFORM.downcase.include?('darwin')
+end
+
+def platform_name
+  platform_is_darwin? ? 'darwin' : 'linux'
 end
 
 def set_zsh_as_default_shell
@@ -294,7 +279,7 @@ def make_symlinks(map)
     puts "source: #{source}, target: #{target}"
 
     if File.exists?(target) && (!File.symlink?(target) || File.readlink(target) != source)
-      puts "[Backup] #{target} -> #{target}.backup"
+      puts "[Backing up] #{target} -> #{target}.backup"
       puts "[Overwriting] #{target}"
       `mv "#{target}" "#{target}.backup"`
     end
