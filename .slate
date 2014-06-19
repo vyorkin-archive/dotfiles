@@ -126,6 +126,9 @@ bind e:cmd ${showNormalHint}
 alias hyper ctrl;shift;alt;cmd
 
 # Location bindings
+bind a:cmd;ctrl ${lefthalf}
+bind d:cmd;ctrl ${righthalf}
+
 bind h:cmd;ctrl ${leftless}
 bind g:cmd;ctrl ${leftmost}
 
