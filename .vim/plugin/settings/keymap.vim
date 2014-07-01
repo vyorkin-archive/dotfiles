@@ -2,6 +2,15 @@
 " General vim sanity improvements
 " ========================================
 
+" format the entire file
+nnoremap <leader>fef :normal! gg=G``<CR>
+
+" set text wrapping toggles
+nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
+
+" find merge conflict markers
+nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
+
 " Use 'gm' for add mark instead of 'm'
 nnoremap gm m
 "
