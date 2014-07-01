@@ -19,6 +19,11 @@ Bundle 'tommcdo/vim-exchange'
 Bundle 'tpope/vim-abolish'
 Bundle 'sjbach/lusty'
 Bundle 'junegunn/goyo.vim'
+Bundle 'jeetsukumaran/vim-buffergator'
+
+Bundle 'tpope/vim-vinegar'
+Bundle 'tpope/vim-eunuch'
+Bundle 'tpope/vim-dispatch'
 
 " Ruby, Rails, Rake...
 Bundle 'tpope/vim-rails'
@@ -26,19 +31,30 @@ Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-heroku'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sunaku/vim-ruby-minitest'
+Bundle 'vim-scripts/paredit.vim'
+Bundle 'amdt/vim-niji'
+" Bundle 'kien/rainbow_parentheses.vim'
 
-" Other languages
-" Bundle 'briancollins/vim-jst'
+" Javascript, coffeescript, actionscript
 Bundle 'pangloss/vim-javascript'
+Bundle 'itspriddle/vim-jquery'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'jeroenbourgois/vim-actionscript'
-" Bundle 'derekwyatt/vim-scala'
-" Bundle 'vim-scripts/nginx.vim'
-" Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
-" Bundle 'vim-scripts/JSON.vim'
-" Bundle 'vim-perl/vim-perl'
-" Bundle 'zaiste/VimClojure'
+
+" Clojure
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-leiningen'
+Bundle 'tpope/vim-projectionist'
+Bundle 'tpope/vim-classpath'
+
+Bundle 'guns/vim-clojure-static'
+Bundle 'guns/vim-clojure-highlight'
+
+" Go
+Bundle 'fatih/vim-go'
 
 " Haskell
 Bundle 'dag/vim2hs'
@@ -48,12 +64,13 @@ Bundle 'jimenezrick/vimerl'
 
 " Html, Xml, Css, Markdown...
 Bundle 'skammer/vim-css-color'
-" Bundle 'groenewege/vim-less'
+Bundle 'groenewege/vim-less'
+Bundle 'hail2u/vim-css3-syntax'
 Bundle 'cakebaker/scss-syntax.vim'
-" Bundle 'itspriddle/vim-jquery'
+
+Bundle 'tpope/vim-markdown'
 Bundle 'jtratner/vim-flavored-markdown'
-Bundle 'kchmck/vim-coffee-script'
-" Bundle 'suan/vim-instant-markdown'
+Bundle 'suan/vim-instant-markdown'
 Bundle 'nelstrom/vim-markdown-preview'
 " Bundle 'skwp/vim-html-escape'
 " Bundle 'timcharper/textile.vim'
@@ -63,12 +80,13 @@ Bundle 'mxw/vim-jsx'
 " Bundle 'gregsexton/VimCalc'
 
 " Git related...
-" Bundle 'gregsexton/gitv'
-" Bundle 'mattn/gist-vim'
+Bundle 'gregsexton/gitv'
+Bundle 'mattn/gist-vim'
 " Bundle 'skwp/vim-git-grep-rails-partial'
 " Bundle 'tjennings/git-grep-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
+Bundle 'tpope/git-bump'
 
 " General text editing improvements...
 " Bundle 'AndrewRadev/splitjoin.vim'
@@ -79,27 +97,27 @@ Bundle 'tpope/vim-git'
 " Snippets
 " Bundle 'garbas/vim-snipmate'
 " Bundle 'scrooloose/snipmate-snippets'
+
 Bundle 'honza/vim-snippets'
 
 Bundle 'godlygeek/tabular'
-" Bundle 'regedarek/ZoomWin'
 Bundle 'mattn/emmet-vim'
 Bundle 'vim-scripts/IndexedSearch'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'svermeulen/vim-easyclip'
-" Bundle 'vim-scripts/camelcasemotion'
-" Bundle 'goldfeld/vim-seek'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'goldfeld/vim-seek'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'terryma/vim-multiple-cursors'
+
+Bundle 'nelstrom/vim-visual-star-search'
 
 " General vim improvements
 Bundle 'vim-scripts/vim-auto-save'
 
 Bundle 'mhinz/vim-signify'
-" Bundle 'airblade/vim-gitgutter'
 
 " Bundle 'MarcWeber/vim-addon-mw-utils'
-" Bundle 'bogado/file-line'
+Bundle 'bogado/file-line'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'kien/ctrlp.vim'
@@ -109,7 +127,7 @@ Bundle 'kien/ctrlp.vim'
 " Bundle 'Shougo/neocomplete.vim'
 " Bundle 'Shougo/neosnippet.vim'
 " Bundle 'Shougo/neosnippet-snippets'
-Bundle 'Shougo/vimproc.vim'
+" Bundle 'Shougo/vimproc.vim'
 
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
@@ -122,19 +140,22 @@ Bundle 'rking/ag.vim'
 Bundle 'mbbill/undotree'
 
 " Bundle 'skwp/YankRing.vim'
-" Bundle 'skwp/greplace.vim'
+Bundle 'skwp/greplace.vim'
 " Bundle 'vim-scripts/Conque-Shell'
 " Bundle 'tomtom/tlib_vim'
+
+Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-scriptease'
+
 " Bundle 'vim-scripts/AnsiEsc.vim'
 " Bundle 'vim-scripts/AutoTag'
 " Bundle 'vim-scripts/lastpos.vim'
 " Bundle 'vim-scripts/sudo.vim'
-" Bundle 'xsunsmile/showmarks'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
 
@@ -170,6 +191,7 @@ Bundle 'gregsexton/Muon'
 Bundle 'gregsexton/Atom'
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'nanotech/jellybeans.vim'
 
 " Bundle 'benmills/vimux'
 " Bundle 'jgdavey/tslime.vim'
