@@ -170,6 +170,13 @@ else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
+" Automatically removing all trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+" Allows you to enter sudo pass and save the file
+" when you forgot to open your file with sudo
+
+cmap w!! %!sudo tee > /dev/null %
+
 let g:session_autoload = 'no'
 let g:session_autosave = 'no'
 
