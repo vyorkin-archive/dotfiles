@@ -91,7 +91,7 @@ set sidescroll=1
 
 " ================ Colors ===========================
 set t_Co=256
-set background=dark
+set background=light
 colorscheme solarized
 
 set cursorline
@@ -106,8 +106,8 @@ if has("gui_running")
   set columns=200
 
   set guifont=Menlo:h12
-  " set fuopt+=maxhorz
-  " set fu
+  set fuopt+=maxhorz
+  set fu
 else
   "dont load csapprox if we no gui support - silences an annoying warning
   let g:CSApprox_loaded = 1

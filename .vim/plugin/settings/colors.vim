@@ -45,7 +45,9 @@ hi! link NonText VertSplit
 hi! link htmlLink Include
 hi! CursorLine cterm=NONE gui=NONE
 
-if g:colors_name == 'solarized'
+hi! NonText ctermbg=NONE guibg=NONE
+
+if g:colors_name == 'solarized' && &bg == "dark"
   " Solarized separators are a little garish.
   " This moves separators, comments, and normal
   " text into the same color family as the background.
@@ -63,6 +65,7 @@ if g:colors_name == 'solarized'
   hi! EasyMotionTarget guifg=#4CE660 gui=bold
 
   hi! SignColumn ctermbg=8 guibg=#002B36
+
 endif
 
 " Make sure this file loads itself on top of any other color settings
