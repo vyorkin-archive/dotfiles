@@ -65,7 +65,9 @@ if g:colors_name == 'solarized' && &bg == "dark"
   hi! EasyMotionTarget guifg=#4CE660 gui=bold
 
   hi! SignColumn ctermbg=8 guibg=#002B36
-
+else
+  hi! VertSplit guifg=NONE guibg=NONE cterm=NONE term=NONE ctermfg=NONE ctermbg=NONE
+  hi! SignColumn ctermfg=6 guifg=#93a1a1 guibg=#eee8d5
 endif
 
 " Make sure this file loads itself on top of any other color settings
