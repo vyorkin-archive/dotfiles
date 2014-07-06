@@ -1,7 +1,3 @@
-# (f)ind by (n)ame
-# usage: fn blahblah
-function fn() { ls **/*$1* }
-
 function vpn-connect() {
 /usr/bin/env osascript <<-EOF
 tell application "System Events"
@@ -27,3 +23,9 @@ end tell
 EOF
 }
 
+function cwvpn() {
+  vpn-connect "nest.undev.ru (VPN)"
+}
+function dwvpn() {
+  vpn-disconnect "nest.undev.ru (VPN)"
+}

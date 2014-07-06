@@ -21,14 +21,13 @@ function! g:goyo_after()
   silent! SignifyToggle
   silent! NERDTreeClose
 
-  " TODO: Looks like shit
   if g:colors_name == 'solarized' && &bg == "dark"
     hi! SignColumn ctermbg=8 guibg=#002B36
     hi! VertSplit guifg=#003745 guibg=#002B36 cterm=NONE term=NONE ctermfg=NONE ctermbg=NONE
     hi! LineNR guifg=#004C60 gui=bold guibg=#002B36 ctermfg=146
   else
     hi! VertSplit guifg=NONE guibg=NONE cterm=NONE term=NONE ctermfg=NONE ctermbg=NONE
-    hi! SignColumn ctermfg=6 guifg=#93a1a1 guibg=#eee8d5
+    hi! SignColumn ctermfg=6 guifg=#93a1a1 guibg=#eee8d5 ctermbg=7
   end
 endfunction
 

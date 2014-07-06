@@ -27,20 +27,22 @@ namespace :install do
 
   desc 'Install gems'
   task :gems do
-    `gem i bundle -v`
+    `gem i bundle`
     `bundle config --global jobs $(sysctl -n hw.ncpu)`
 
     gems = %w(
-      ghi pry pry-remote pry-doc pry-git awesome_print sketches
-      hirb hirb-unicode pry-stack_explorer coolline rubocop
-      pry-coolline pry-rails pry-theme pry-vterm_aliases
-      coderay pry-rescue gist jist interactive_editor foreman
+      ghi pry pry-remote pry-doc pry-git awesome_print sketches hirb
+      hirb-unicode pry-stack_explorer coolline rubocop pry-coolline
+      pry-rails pry-theme coderay pry-rescue gist jist interactive_editor
+      foreman
     )
-    `gem i gas gas_stats -v`
-    `gem i #{gems.join(' ')} -v`
 
-    `gem i pry-byebug --version 1.1.1 -v`
-    `gem i minitest-byebug -v`
+    `gem i gas gas_stats --backtrace`
+
+    gems.each { |gem| `gem i #{gem} --backtrace` }
+
+    `gem i pry-byebug -v 1.1.1`
+    `gem i minitest-byebug`
   end
 
   desc 'Runs Vundle installer in a clean vim environment'
@@ -144,6 +146,7 @@ namespace :darwin do
       packages = %w(
         zsh ctags git hub tmux reattach-to-user-namespace
         the_silver_searcher fasd git-flow git-extras autoenv watch
+        w3m links
       )
       `brew install #{packages.join(' ')}`
       puts
@@ -154,8 +157,10 @@ end
 namespace :symlink do
   desc 'Symlink all dotfiles'
   task :all do
-    %w(bash ruby infrastructure git zsh tmux vim oh_my_zsh dotpryrc zsh_pure)
-      .each { |t| run "symlink:#{t}" }
+    %w(
+      bash ruby infrastructure git zsh tmux
+      vim oh_my_zsh dotpryrc zsh_pure mutt
+    ).each { |t| run "symlink:#{t}" }
   end
 
   desc 'Symlink bash dotfiles'
@@ -196,7 +201,12 @@ namespace :symlink do
 
   desc 'Symlink tmux dotfiles'
   task :tmux do
-    make_symlinks(%w(.tmux .tmux.config .tmuxinator))
+    make_symlinks(%w(.tmux tmux-colors-solarized .tmux.config .tmuxinator))
+  end
+
+  desc 'Symlink mutt dotfiles'
+  task :mutt do
+    make_symlinks(%w(.mutt_secrets .muttrc .mailcap mutt-colors-solarized))
   end
 
   desc 'Symlink vim dotfiles'

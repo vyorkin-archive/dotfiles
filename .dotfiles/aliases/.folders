@@ -1,0 +1,22 @@
+# Common
+
+alias sites='cd ~/Sites/'
+alias desk='cd ~/Desktop/'
+alias docs='cd ~/Documents/'
+
+# Programming
+
+alias work='cd ~/programming/work/'
+alias play='cd ~/programming/play/'
+alias avr='cd ~/programming/play/avr/'
+alias gith='cd ~/GitHub/'
+
+# Projects
+
+## Undev
+
+## Own
+
+## My
+
+alias dotfiles="cd ~/github/dotfiles"

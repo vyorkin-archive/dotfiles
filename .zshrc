@@ -7,7 +7,8 @@ export GREP_COLOR='1;33'
 
 # Use vi key bindings
 bindkey -v
-# [Crtl-r] - Search backward incrementally for a specofied string
+
+# Search backward incrementally for a specofied string
 bindkey '^r' history-incremental-search-backward
 
 # Emacs style
@@ -29,7 +30,7 @@ plugins=(
   ant fasd battery brew cap cabal coffee docker cp gem
   git github heroku history history-substring-search jruby knife lein
   node npm osx perl python rails rake rsync ruby rvm scala sublime tmux
-  tmuxinator torrent vagrant vundle redis-cli web-search zeus
+  tmuxinator torrent vagrant vundle redis-cli web-search zeus bower
 )
 
 source $ZSH/oh-my-zsh.sh
