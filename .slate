@@ -13,6 +13,7 @@ config windowHintsSpread true
 config windowHintsSpreadPadding 40
 config windowHintsSpreadSearchWidth 80
 config windowHintsSpreadSearchHeight 80
+
 config switchIconPadding 2
 config switchBackgroundColor 50;53;58;0.7
 config switchSelectedPadding 4
@@ -24,16 +25,22 @@ config undoOps move,resize
 
 config keyboardLayout qwerty
 
+# App aliases
+
+alias browser 'Google Chrome Canary'
+alias editor 'MacVim'
+alias terminal 'iTerm'
+alias mail 'Mail'
+
 # Monitor aliases
+
 alias mon-laptop 0
 alias mon-dell   1
 
 # Misc aliases
+
 alias showHintsLeftHand hint AOEUIYQJKX
 alias showNormalHint hint AOEUIDHTNSYXFBPKGMCW
-
-alias browser 'Google Chrome'
-alias editor 'MacVim'
 
 # Abstract positions
 
@@ -42,7 +49,7 @@ alias full          move screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias lefthalf      move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
 alias righthalf     move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
 
-alias rightmost     move screenOriginX+screenSizeX*0.75;screenOriginY screenSizeX;screenSizeY
+alias rightmost     move screenOriginX+screenSizeX*0.75;screenOriginY screenSizeX/4;screenSizeY
 alias rightless     move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/4;screenSizeY
 
 alias leftmost      move screenOriginX;screenOriginY screenSizeX/4;screenSizeY
@@ -67,12 +74,12 @@ alias 2-leftless    move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/4
 
 # 2 Monitor layout
 
-layout 2monitors 'iTerm':MAIN_FIRST           ${2-rightbottom} | ${1-left}
+layout 2monitors ${terminal}:MAIN_FIRST       ${2-rightbottom} | ${1-left}
 layout 2monitors 'Safari':REPEAT              ${2-left}
-layout 2monitors 'Google Chrome':REPEAT       ${2-left}
+layout 2monitors ${browser}:REPEAT            ${2-left}
 layout 2monitors 'Sublime Text 2':REPEAT      ${1-full}
-layout 2monitors 'MacVim':REPEAT              ${1-full}
-layout 2monitors 'Mail':MAIN_FIRST            ${2-left}
+layout 2monitors ${editor}:REPEAT             ${1-full}
+layout 2monitors ${mail}:MAIN_FIRST           ${2-left}
 layout 2monitors 'Path Finder':MAIN_FIRST     ${2-righttop}
 layout 2monitors 'Xcode':REPEAT               ${1-full}
 layout 2monitors 'Eclipse':REPEAT             ${1-full}
@@ -82,12 +89,12 @@ layout 2monitors 'Messages':REPEAT            ${2-leftmost}
 
 # 1 Monitor layout
 
-layout 1monitor 'iTerm':MAIN_FIRST            ${1-right}
+layout 1monitor ${terminal}:MAIN_FIRST        ${1-full}
 layout 1monitor 'Sublime Text 2':MAIN_FIRST   ${1-left}
-layout 1monitor 'MacVim':MAIN_FIRST           ${1-left}
+layout 1monitor ${editor}:MAIN_FIRST          ${1-left}
 layout 1monitor 'Safari':REPEAT               ${1-full}
-layout 1monitor 'Google Chrome':REPEAT        ${1-full}
-layout 1monitor 'Mail':MAIN_FIRST             ${1-full}
+layout 1monitor ${browser}:REPEAT             ${1-full}
+layout 1monitor ${mail}:MAIN_FIRST            ${1-full}
 layout 1monitor 'Path Finder':MAIN_FIRST      ${1-full}
 layout 1monitor 'Xcode':REPEAT                ${1-full}
 layout 1monitor 'Eclipse':REPEAT              ${1-full}
@@ -97,7 +104,7 @@ layout 1monitor 'Messages':REPEAT             ${1-left}
 
 # Default Layouts
 
-default 2monitors resolutions:${mon-laptop};${mon-dell};
+default 2monitors resolutions:${mon-laptop};${mon-dell}
 default 1monitor  resolutions:${mon-laptop}
 
 # Grid
@@ -160,8 +167,9 @@ bind ;:cmd;ctrl ${rightmost}
 
 bind n:${hyper} throw next
 
-bind 1:${hyper} layout 2monitors
-bind 2:${hyper} layout 1monitor
+bind 2:${hyper} layout 2monitors
+
+bind 1:${hyper} layout 1monitor
 
 # Focus Bindings
 
@@ -176,8 +184,9 @@ bind e:${hyper} focus ${browser}
 bind u:${hyper} focus ${editor}
 bind x:${hyper} focus 'Xcode'
 bind g:${hyper} focus 'GitHub'
-bind m:${hyper} focus 'Mail'
-bind i:${hyper} focus 'iTerm'
+bind m:${hyper} focus ${mail}
+bind i:${hyper} focus ${terminal}
 bind o:${hyper} focus 'Path Finder'
 bind s:${hyper} focus 'Skype'
+bind v:${hyper} focus 'nvALT'
 
