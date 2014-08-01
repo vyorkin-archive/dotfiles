@@ -1,7 +1,7 @@
 [hub]
   protocol = https
 [user]
-	name = Vasiliy Yorkin
+  name = Vasiliy Yorkin
   email = vasiliy.yorkin@gmail.com
 [github]
   user = vyorkin
@@ -111,7 +111,7 @@
   ui = true
 [core]
   autocrlf = false
-	excludesfile = /Users/vyorkin/.gitignore
+  excludesfile = /Users/vyorkin/.gitignore
   editor = vi
 [advice]
   statusHints = false
@@ -126,11 +126,13 @@
 [help]
   autocorrect = 1
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[log]
+	decorate = short
