@@ -91,7 +91,7 @@ set sidescroll=1
 
 " ================ Colors ===========================
 set t_Co=256
-set background=light
+set background=dark
 colorscheme solarized
 
 set cursorline

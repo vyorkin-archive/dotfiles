@@ -31,7 +31,7 @@ namespace :install do
     `bundle config --global jobs $(sysctl -n hw.ncpu)`
 
     gems = %w(
-      ghi pry pry-remote pry-doc pry-git awesome_print sketches hirb
+      gem-ctags ghi pry pry-remote pry-doc pry-git awesome_print sketches hirb
       hirb-unicode pry-stack_explorer coolline rubocop pry-coolline
       pry-rails pry-theme coderay pry-rescue gist jist interactive_editor
       foreman
@@ -146,7 +146,7 @@ namespace :darwin do
       packages = %w(
         zsh ctags git hub tmux reattach-to-user-namespace
         the_silver_searcher fasd git-flow git-extras autoenv watch
-        w3m links
+        w3m links rbenv ruby-build
       )
       `brew install #{packages.join(' ')}`
       puts
