@@ -32,8 +32,11 @@
   path = .antigen
   url = https://github.com/zsh-users/antigen.git
 [submodule "tmux-colors-solarized"]
-	path = tmux-colors-solarized
-	url = https://github.com/seebi/tmux-colors-solarized.git
+  path = tmux-colors-solarized
+  url = https://github.com/seebi/tmux-colors-solarized.git
 [submodule "mutt-colors-solarized"]
-	path = mutt-colors-solarized
-	url = https://github.com/altercation/mutt-colors-solarized.git
+  path = mutt-colors-solarized
+  url = https://github.com/altercation/mutt-colors-solarized.git
+[submodule "dotsecrets"]
+	path = dotsecrets
+	url = git@bitbucket.org:vyorkin/dotsecrets.git
