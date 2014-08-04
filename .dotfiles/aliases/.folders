@@ -1,22 +1,27 @@
 # Common
 
-alias sites='cd ~/Sites/'
-alias desk='cd ~/Desktop/'
-alias docs='cd ~/Documents/'
+alias sites='cd ~/Sites'
+alias desk='cd ~/Desktop'
+alias docs='cd ~/Documents'
 
 # Programming
 
-alias work='cd ~/programming/work/'
-alias play='cd ~/programming/play/'
-alias avr='cd ~/programming/play/avr/'
-alias gith='cd ~/GitHub/'
+alias work='cd ~/programming/work'
+alias play='cd ~/programming/play'
+alias avr='cd ~/programming/play/avr'
+alias arduino='cd ~/programming/play/arduino'
+
+alias gith='cd ~/GitHub'
+alias gh='cd ~/GitHub'
 
 # Projects
 
 ## Undev
+alias rfpl='cd ~/programming/work/football-rfpl-cc'
 
 ## Own
 
 ## My
 
-alias dotfiles="cd ~/github/dotfiles"
+alias dotfiles='cd ~/github/dotfiles'
+alias dotsecrets='cd ~/github/dotsecrets'
