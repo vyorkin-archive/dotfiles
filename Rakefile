@@ -159,7 +159,7 @@ namespace :symlink do
   task :all do
     %w(
       bash ruby infrastructure git zsh tmux
-      vim oh_my_zsh dotpryrc zsh_pure mutt
+      vim oh_my_zsh dotpryrc pryrc zsh_pure mutt
     ).each { |t| run "symlink:#{t}" }
   end
 
@@ -221,10 +221,12 @@ namespace :symlink do
 
   desc 'Symlink dotpryrc submodule'
   task :dotpryrc do
-    make_symlinks({
-      'dotpryrc/.pryrc' => '.pryrc',
-      'dotpryrc/.pryrc-helpers.rb' => '.pryrc-helpers.rb'
-    })
+    make_symlinks({'dotpryrc' => '.dotpryrc'})
+  end
+
+  desc 'Symlink pryrc'
+  task :pryrc do
+    make_symlinks(%w(.pryrc))
   end
 
   desc 'Symlink zsh pure submodule'
