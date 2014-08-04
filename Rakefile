@@ -206,7 +206,6 @@ namespace :symlink do
 
   desc 'Symlink zsh dotfiles'
   task :zsh do
-    `touch .secret_tokens`
     make_symlinks(%w(
       .zlogin .zlogout .zprofile .zshenv
       .zshrc .antigen .powerline-shell
@@ -232,7 +231,16 @@ namespace :symlink do
   desc 'Symlink dotsecrets'
   task :dotsecrets do
     make_symlinks({'dotsecrets' => '.dotsecrets'})
+
     make_symlinks({'dotsecrets/.floorc' => '.floorc'})
+
+    make_symlinks({
+      'dotsecrets/.ssh/config' => '.ssh/config',
+      'dotsecrets/.ssh/id_boot2docker' => '.ssh/id_boot2docker',
+      'dotsecrets/.ssh/id_boot2docker.pub' => '.ssh/id_boot2docker.pub',
+      'dotsecrets/.ssh/id_rsa' => '.ssh/id_rsa',
+      'dotsecrets/.ssh/id_rsa.pub' => '.ssh/id_rsa.pub'
+    })
   end
 
   desc 'Symlink vim dotfiles'
