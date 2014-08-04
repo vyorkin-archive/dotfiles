@@ -1,5 +1,4 @@
-PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/bin:/Applications/VMware\ Fusion.app/Contents/Library/
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+PATH=/usr/local/bin:$HOME/bin:/Applications/VMware\ Fusion.app/Contents/Library/:$PATH
 
 export GOPATH=/usr/local/go/bin
 
