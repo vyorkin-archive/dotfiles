@@ -180,7 +180,7 @@ namespace :symlink do
 
   desc 'Symlink ruby dotfiles'
   task :ruby do
-    make_symlinks(%w(.gemrc .irbrc .bundle/config .gas/config))
+    make_symlinks(%w(.gemrc .irbrc .bundle/config .gas/users))
   end
 
   desc 'Symlink weechat dotfiles'
