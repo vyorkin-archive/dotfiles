@@ -32,7 +32,7 @@ namespace :install do
 
     gems = %w(
       gem-ctags ghi pry pry-remote pry-doc pry-git awesome_print sketches hirb
-      hirb-unicode pry-stack_explorer coolline rubocop pry-coolline
+      hirb-unicode coolline rubocop pry-coolline
       pry-rails pry-theme coderay pry-rescue gist jist interactive_editor
       foreman
     )

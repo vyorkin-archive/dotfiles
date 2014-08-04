@@ -38,5 +38,5 @@
   path = mutt-colors-solarized
   url = https://github.com/altercation/mutt-colors-solarized.git
 [submodule "dotsecrets"]
-  path = dotsecrets
-  url = git@bitbucket.org:vyorkin/dotsecrets.git
+	path = dotsecrets
+	url = git@bitbucket.org:vyorkin/dotsecrets.git
