@@ -232,6 +232,7 @@ namespace :symlink do
   desc 'Symlink dotsecrets'
   task :dotsecrets do
     make_symlinks({'dotsecrets' => '.dotsecrets'})
+    make_symlinks({'dotsecrets/.floorc' => '.floorc'})
   end
 
   desc 'Symlink vim dotfiles'

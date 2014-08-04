@@ -1,4 +1,4 @@
-PATH=/usr/local/bin:$HOME/bin:/Applications/VMware\ Fusion.app/Contents/Library/:$PATH
+PATH=/usr/local/bin:$HOME/bin:$HOME/rbenv/bin:/Applications/VMware\ Fusion.app/Contents/Library/:$PATH
 
 export GOPATH=/usr/local/go/bin
 
