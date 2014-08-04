@@ -159,7 +159,8 @@ namespace :symlink do
   task :all do
     %w(
       bash ruby infrastructure git zsh tmux
-      vim oh_my_zsh dotpryrc pryrc zsh_pure mutt
+      vim oh_my_zsh dotsecrets dotpryrc
+      pryrc zsh_pure mutt
     ).each { |t| run "symlink:#{t}" }
   end
 
@@ -194,8 +195,9 @@ namespace :symlink do
   task :zsh do
     `touch .secret_tokens`
     make_symlinks(%w(
-      .zlogin .zlogout .zprofile .zshenv .secret_tokens
-      .zshrc .antigen .powerline-shell .antigen-bundler
+      .zlogin .zlogout .zprofile .zshenv
+      .zshrc .antigen .powerline-shell
+      .antigen-bundler
     ))
   end
 
@@ -206,7 +208,12 @@ namespace :symlink do
 
   desc 'Symlink mutt dotfiles'
   task :mutt do
-    make_symlinks(%w(.mutt_secrets .muttrc .mailcap mutt-colors-solarized))
+    make_symlinks(%w(.muttrc .mailcap mutt-colors-solarized))
+  end
+
+  desc 'Symlink dotsecrets'
+  task :dotsecrets do
+    make_symlinks({'dotsecrets' => '.dotsecrets'})
   end
 
   desc 'Symlink vim dotfiles'
