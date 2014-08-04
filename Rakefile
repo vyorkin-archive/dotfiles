@@ -173,13 +173,13 @@ namespace :symlink do
   task :infrastructure do
     make_symlinks(%w(
       .dotfiles .aprc .cabal .cheat .ctags .kerlrc
-      .curlrc .ghci .htoprc .irssi .slate .octave
+      .curlrc .ghci .htoprc .irssi .slate .octave .avrduderc
     ))
   end
 
   desc 'Symlink ruby dotfiles'
   task :ruby do
-    make_symlinks(%w(.gemrc .irbrc))
+    make_symlinks(%w(.gemrc .irbrc .bundle/config .gas/config))
   end
 
   desc 'Symlink git dotfiles'
