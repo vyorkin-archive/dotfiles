@@ -159,7 +159,7 @@ namespace :symlink do
   task :all do
     %w(
       bash ruby infrastructure git zsh tmux
-      vim oh_my_zsh dotsecrets dotpryrc
+      vim oh_my_zsh dotsecrets rbenv dotpryrc
       pryrc zsh_pure mutt
     ).each { |t| run "symlink:#{t}" }
   end
@@ -204,6 +204,11 @@ namespace :symlink do
   desc 'Symlink tmux dotfiles'
   task :tmux do
     make_symlinks(%w(.tmux tmux-colors-solarized .tmux.config .tmuxinator))
+  end
+
+  desc 'Symlink rbenv dotfiles'
+  task :rbenv do
+    make_symlinks(%w(.rbenv/default-gems))
   end
 
   desc 'Symlink mutt dotfiles'

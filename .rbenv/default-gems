@@ -1,0 +1,25 @@
+gem-ctags
+bundler
+ghi
+pry
+pry-remote
+pry-doc
+pry-git
+awesome_print
+sketches
+hirb
+hirb-unicode
+pry-stack_explorer
+coolline
+rubocop
+pry-coolline
+pry-theme
+coderay
+pry-rescue
+gist
+interactive_editor
+foreman
+gas
+gas_stats
+pry-byebug -v 1.1.1
+minitest-byebug
