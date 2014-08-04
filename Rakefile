@@ -160,7 +160,7 @@ namespace :symlink do
     %w(
       bash ruby infrastructure git zsh tmux
       vim oh_my_zsh dotsecrets rbenv dotpryrc
-      pryrc zsh_pure mutt
+      pryrc zsh_pure mutt weechat
     ).each { |t| run "symlink:#{t}" }
   end
 
@@ -173,13 +173,26 @@ namespace :symlink do
   task :infrastructure do
     make_symlinks(%w(
       .dotfiles .aprc .cabal .cheat .ctags .kerlrc
-      .curlrc .ghci .htoprc .irssi .slate .octave .avrduderc
+      .curlrc .ghci .htoprc .irssi
+      .slate .octave .avrduderc
     ))
   end
 
   desc 'Symlink ruby dotfiles'
   task :ruby do
     make_symlinks(%w(.gemrc .irbrc .bundle/config .gas/config))
+  end
+
+  desc 'Symlink weechat dotfiles'
+  task :weechat do
+    make_symlinks(%w(
+      .weechat/alias.conf .weechat/relay.conf
+      .weechat/weechat.conf .weechat/xfer.conf
+      .weechat/plugins.conf .weechat/irc.conf
+      .weechat/sec.conf .weechat/logger.conf
+      .weechat/charset.conf .weechat/rmodifier.conf
+      .weechat/script.conf
+    ))
   end
 
   desc 'Symlink git dotfiles'
