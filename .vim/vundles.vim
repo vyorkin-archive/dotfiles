@@ -37,7 +37,6 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'amdt/vim-niji'
-" Bundle 'kien/rainbow_parentheses.vim'
 
 " Javascript, coffeescript, actionscript
 Bundle 'pangloss/vim-javascript'
@@ -77,9 +76,6 @@ Bundle 'nelstrom/vim-markdown-preview'
 " Bundle 'timcharper/textile.vim'
 Bundle 'mxw/vim-jsx'
 
-" Scientific stuff
-" Bundle 'gregsexton/VimCalc'
-
 " Git related...
 Bundle 'gregsexton/gitv'
 Bundle 'mattn/gist-vim'
@@ -88,6 +84,9 @@ Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/git-bump'
+Bundle 'mhinz/vim-signify'
+
+Bundle 'godlygeek/csapprox'
 
 " General text editing improvements...
 " Bundle 'AndrewRadev/splitjoin.vim'
@@ -115,7 +114,6 @@ Bundle 'nelstrom/vim-visual-star-search'
 " General vim improvements
 Bundle 'vim-scripts/vim-auto-save'
 
-Bundle 'mhinz/vim-signify'
 
 " Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'bogado/file-line'
