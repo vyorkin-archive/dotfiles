@@ -106,8 +106,8 @@ if has("gui_running")
   set columns=200
 
   set guifont=Menlo:h12
-  set fuopt+=maxhorz
-  set fu
+  " set fuopt+=maxhorz
+  " set fu
 else
   "dont load csapprox if we no gui support - silences an annoying warning
   let g:CSApprox_loaded = 1
@@ -172,6 +172,7 @@ endif
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
+
 " Allows you to enter sudo pass and save the file
 " when you forgot to open your file with sudo
 
