@@ -13,7 +13,7 @@ nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
 " Use 'gm' for add mark instead of 'm'
 nnoremap gm m
-"
+
 " alias yw to yank the entire word 'yank inner word'
 " even if the cursor is halfway inside the word
 " FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
@@ -43,6 +43,7 @@ nmap <silent> ,qo :copen<CR>
 " which will move us around by functions
 nnoremap <silent> <D-j> }
 nnoremap <silent> <D-k> {
+
 autocmd FileType ruby map <buffer> <D-j> ]m
 autocmd FileType ruby map <buffer> <D-k> [m
 autocmd FileType rspec map <buffer> <D-j> }

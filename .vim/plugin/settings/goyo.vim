@@ -2,21 +2,23 @@ nnoremap <Leader><Space> :Goyo<CR>
 
 let g:goyo_width = 100
 
-function! g:goyo_before()
+function! GoyoBefore()
   if has('gui_running')
   elseif exists('$TMUX')
     silent !tmux set status off
   endif
+
   silent! NERDTreeClose
   silent! SignifyToggle
   silent! set nonumber
 endfunction
 
-function! g:goyo_after()
+function! GoyoAfter()
   if has('gui_running')
   elseif exists('$TMUX')
     silent !tmux set status on
   endif
+
   silent! set number
   silent! SignifyToggle
   silent! NERDTreeClose
@@ -31,4 +33,4 @@ function! g:goyo_after()
   end
 endfunction
 
-let g:goyo_callbacks = [function('g:goyo_before'), function('g:goyo_after')]
+let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
