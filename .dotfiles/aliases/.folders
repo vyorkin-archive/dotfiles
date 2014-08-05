@@ -25,3 +25,4 @@ alias rfpl='cd ~/programming/work/football-rfpl-cc'
 
 alias dotfiles='cd ~/github/dotfiles'
 alias dotsecrets='cd ~/github/dotsecrets'
+alias blog='cd ~/github/vyorkin.github.io'

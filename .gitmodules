@@ -40,3 +40,6 @@
 [submodule "dotsecrets"]
 	path = dotsecrets
 	url = git@bitbucket.org:vyorkin/dotsecrets.git
+[submodule "zsh-autosuggestions"]
+	path = zsh-autosuggestions
+	url = https://github.com/tarruda/zsh-autosuggestions.git
