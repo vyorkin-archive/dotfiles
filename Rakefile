@@ -14,7 +14,7 @@ namespace :install do
   desc 'Install all'
   task :all do
     run 'update_submodules', 'symlink:all'
-    %w(vundle gems packages rvm_binstubs powerline_shell)
+    %w(vundle gems packages powerline_shell)
       .each { |t| run "install:#{t}" }
 
     set_zsh_as_default_shell
@@ -65,13 +65,6 @@ namespace :install do
     `./powerline-shell/install.py`
     `ln -nfs "#{ENV["PWD"]}/powerline-shell/powerline-shell.py" "#{ENV["HOME"]}/powerline-shell.py"`
   end
-
-  desc 'Install rvm binstubs'
-  task :rvm_binstubs do
-    puts 'installing rvm binstubs'
-    # TODO: Fix this stuff
-    #`chmod +x $rvm_path/hooks/after_cd_bundler`
-  end
 end
 
 namespace :linux do
@@ -96,7 +89,12 @@ namespace :darwin do
     `which brew`
     run 'darwin:homebrew:install' unless $?.success?
     %w(update install_packages).each { |t| run "darwin:homebrew:#{t}" }
-    %w(install_fonts install_iterm_themes).each { |t| run "darwin:#{t}" }
+    %w(pow install_fonts install_iterm_themes).each { |t| run "darwin:#{t}" }
+  end
+
+  desc 'Install POW'
+  task :install_pow do
+    `curl get.pow.cx | sh`
   end
 
   desc 'Install heroku toolbelt and plugins'
@@ -160,7 +158,7 @@ namespace :symlink do
     %w(
       bash ruby infrastructure git zsh tmux
       vim oh_my_zsh dotsecrets rbenv dotpryrc
-      pryrc zsh_pure mutt weechat
+      pryrc zsh_pure mutt weechat pow
     ).each { |t| run "symlink:#{t}" }
   end
 
