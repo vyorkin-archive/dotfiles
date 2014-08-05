@@ -209,6 +209,7 @@ namespace :symlink do
       .zshrc .antigen .powerline-shell
       .antigen-bundler
     ))
+    make_symlinks('zsh-autosuggestions' => '.zsh-autosuggestions')
   end
 
   desc 'Symlink tmux dotfiles'
