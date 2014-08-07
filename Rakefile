@@ -14,7 +14,7 @@ namespace :install do
   desc 'Install all'
   task :all do
     run 'update_submodules', 'symlink:all'
-    %w(vundle gems packages powerline_shell)
+    %w(vundle gems packages powerline_shell rbenv_plugins)
       .each { |t| run "install:#{t}" }
 
     set_zsh_as_default_shell
@@ -64,6 +64,25 @@ namespace :install do
     `cp -f powerline-shell/config.py.dist powerline-shell/config.py`
     `./powerline-shell/install.py`
     `ln -nfs "#{ENV["PWD"]}/powerline-shell/powerline-shell.py" "#{ENV["HOME"]}/powerline-shell.py"`
+  end
+
+  desc 'Install rbenv plugins'
+  task :rbenv_plugins do
+      `
+        cd $HOME/.rbenv/plugins
+        git clone https://github.com/znz/rbenv-plug.git
+        git clone https://github.com/rkh/rbenv-update.git
+        git clone https://github.com/ianheggie/rbenv-binstubs.git
+        git clone https://github.com/tpope/rbenv-ctags.git
+        git clone https://github.com/sstephenson/rbenv-default-gems.git
+        git clone https://github.com/sstephenson/rbenv-vars.git
+        git clone https://github.com/sstephenson/rbenv-gem-rehash.git
+        git clone https://github.com/rkh/rbenv-use.git
+        git clone https://github.com/tpope/rbenv-communal-gems.git
+        git clone https://github.com/tpope/rbenv-aliases.git
+        git clone https://github.com/mislav/rbenv-user-gems.git
+        git clone https://github.com/carsomyr/rbenv-bundler.git
+      `
   end
 end
 

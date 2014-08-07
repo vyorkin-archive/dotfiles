@@ -35,6 +35,11 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
+source $HOME/.zsh-history-substring-search/zsh-history-substring-search.zsh
+
 source $HOME/.zsh-autosuggestions/autosuggestions.zsh
 
 # Enable autosuggestions automatically
@@ -47,11 +52,6 @@ zle -N zle-line-init
 # zsh-autosuggestions is designed to be unobtrusive)
 bindkey '^T' autosuggest-toggle
 bindkey '^f' vi-forward-word
-
-source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-
-source $HOME/.zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # bind P and N for EMACS mode
 bindkey -M emacs '^P' history-substring-search-up
