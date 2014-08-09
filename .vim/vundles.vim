@@ -28,7 +28,6 @@ Bundle 'tpope/vim-dispatch'
 " Ruby, Rails, Rake...
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-heroku'
