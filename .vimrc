@@ -22,8 +22,8 @@ set hidden
 " turn on syntax highlighting
 syntax on
 
-" The mapleader has to be set before vundle starts loading all
-" the plugins.
+" The mapleader has to be set
+" before vundle starts loading all the plugins.
 let mapleader=","
 
 " =============== Vundle Initialization ===============
@@ -106,6 +106,7 @@ if has("gui_running")
   set columns=200
 
   set guifont=Menlo:h12
+
   " set fuopt+=maxhorz
   " set fu
 else
@@ -139,7 +140,6 @@ set hlsearch
 " set wrap
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:·
 set gdefault
-" set foldenable
 set ofu=syntaxcomplete#Complete
 set title
 set shortmess=atI
@@ -178,5 +178,3 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 cmap w!! %!sudo tee > /dev/null %
 
-let g:session_autoload = 'no'
-let g:session_autosave = 'no'
