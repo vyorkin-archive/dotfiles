@@ -81,7 +81,6 @@ namespace :install do
         git clone https://github.com/tpope/rbenv-communal-gems.git
         git clone https://github.com/tpope/rbenv-aliases.git
         git clone https://github.com/mislav/rbenv-user-gems.git
-        git clone https://github.com/carsomyr/rbenv-bundler.git
       `
   end
 end
