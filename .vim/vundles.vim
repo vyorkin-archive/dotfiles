@@ -108,12 +108,11 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'goldfeld/vim-seek'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'terryma/vim-multiple-cursors'
-
+Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'nelstrom/vim-visual-star-search'
 
 " General vim improvements
 Bundle 'vim-scripts/vim-auto-save'
-
 
 " Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'bogado/file-line'
