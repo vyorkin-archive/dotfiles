@@ -72,7 +72,7 @@ unsetopt correct_all
 autoload predict-on
 autoload predict-off
 
-# you may also wish to bind it to some keys...
+# on/off zsh autopredict
 zle -N predict-on
 zle -N predict-off
 bindkey '^X1' predict-on
