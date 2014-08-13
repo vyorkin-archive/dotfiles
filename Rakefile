@@ -214,9 +214,10 @@ namespace :symlink do
   desc 'Symlink git dotfiles'
   task :git do
     make_symlinks({
-      '.gitconfig' => '.gitconfig',
-      'gitignore'  => '.gitignore',
-      '.gitk'      => '.gitk'
+      '.git_template' => '.git_template',
+      '.gitconfig'    => '.gitconfig',
+      'gitignore'     => '.gitignore',
+      '.gitk'         => '.gitk'
     })
   end
 
