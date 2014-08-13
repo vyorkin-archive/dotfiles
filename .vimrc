@@ -14,6 +14,7 @@ set autowrite
 set autowriteall
 set lazyredraw                  "Don't redraw while in macros
 set cole=1                      "Enable conceal
+set conceallevel=2
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
