@@ -44,6 +44,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'jeroenbourgois/vim-actionscript'
+Bundle 'marijnh/tern_for_vim'
 
 " Clojure
 Bundle 'tpope/vim-fireplace'
@@ -91,6 +92,7 @@ Bundle 'godlygeek/csapprox'
 
 " General text editing improvements...
 " Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'Raimondi/delimitMate'
 
 " Bundle 'briandoll/change-inside-surroundings.vim'
