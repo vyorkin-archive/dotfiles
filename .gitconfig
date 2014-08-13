@@ -91,6 +91,7 @@
   svnl = svn log --oneline --show-commit
 
   st = !open -a SourceTree .
+	ctags = !.git/hooks/ctags
 [format]
   pretty = format:%C(magenta)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(white)%s %C(red) [%an]%Creset
 [mergetool]
