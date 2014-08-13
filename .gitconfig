@@ -136,3 +136,5 @@
 	smudge = git-media-smudge %f
 [log]
 	decorate = short
+[init]
+	templatedir = ~/.git_template
