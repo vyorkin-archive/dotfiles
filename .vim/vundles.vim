@@ -38,6 +38,8 @@ Bundle 'vim-scripts/paredit.vim'
 Bundle 'amdt/vim-niji'
 
 " Javascript, coffeescript, actionscript
+" Bundle 'drslump/vim-syntax-js'
+Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'kchmck/vim-coffee-script'
@@ -89,7 +91,7 @@ Bundle 'godlygeek/csapprox'
 
 " General text editing improvements...
 " Bundle 'AndrewRadev/splitjoin.vim'
-" Bundle 'Raimondi/delimitMate'
+Bundle 'Raimondi/delimitMate'
 
 " Bundle 'briandoll/change-inside-surroundings.vim'
 

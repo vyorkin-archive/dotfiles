@@ -15,6 +15,7 @@ set autowriteall
 set lazyredraw                  "Don't redraw while in macros
 set cole=1                      "Enable conceal
 set conceallevel=2
+set concealcursor=nc            "Don't reveal the conceals unless on insert or visual modes
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -71,6 +72,10 @@ set linebreak    "Wrap lines at convenient points
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
+
+" lang/syntax specific
+au FileType javascript setl foldmethod=syntax
+au FileType ruby setl foldmethod=syntax
 
 " ================ Completion =======================
 set wildmode=list:longest
