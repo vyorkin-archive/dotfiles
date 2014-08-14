@@ -81,23 +81,13 @@ propTypes: {
 endsnippet
 
 snippet rcc
-/**
- * @jsx React.DOM
- */
-
-var React = require('React');
-
 var ${1:ClassName} = React.createClass({
-
 	render: function() {
 		return (
-			${0:<div />}
+			${0:<div>ima component</div>}
 		);
 	}
-
 });
-
-module.exports = $1;
 endsnippet
 
 snippet ren
@@ -132,10 +122,15 @@ snippet trp
 transferPropsTo(${1});
 endsnippet
 
-snippet rt "react template for playground" b
+snippet rt "react app class template" b
 /*** @jsx React.DOM */
-var APP = React.createClass({
-	${1:yourShittyCode}
+
+var ${1:APP} = React.createClass({
+	render: function() {
+		return (
+			${0:<div>ima component</div>}
+		);
+	}
 });
-React.renderComponent(<APP val={0} />, document.body)
+React.renderComponent(<APP />, document.body);
 endsnippet
