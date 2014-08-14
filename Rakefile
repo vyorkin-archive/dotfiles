@@ -176,7 +176,7 @@ namespace :symlink do
     %w(
       bash ruby infrastructure git zsh tmux
       vim oh_my_zsh dotsecrets rbenv dotpryrc
-      pryrc zsh_pure mutt weechat pow
+      pryrc zsh_pure mutt weechat pow nodejs
     ).each { |t| run "symlink:#{t}" }
   end
 
@@ -219,6 +219,11 @@ namespace :symlink do
       'gitignore'     => '.gitignore',
       '.gitk'         => '.gitk'
     })
+  end
+
+  desc 'Symlink nodejs dotfiles'
+  task :nodejs do
+    make_symlinks(%w(.npmignore))
   end
 
   desc 'Symlink zsh dotfiles'
