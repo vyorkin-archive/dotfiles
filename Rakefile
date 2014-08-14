@@ -190,7 +190,7 @@ namespace :symlink do
     make_symlinks(%w(
       .dotfiles .aprc .cabal .cheat .ctags .kerlrc
       .curlrc .ghci .htoprc .irssi
-      .slate .octave .avrduderc
+      .slate .octave .avrduderc .wgetrc
     ))
   end
 
