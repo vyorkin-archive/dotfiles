@@ -38,7 +38,7 @@ Bundle 'vim-scripts/paredit.vim'
 Bundle 'amdt/vim-niji'
 
 " Javascript, coffeescript, actionscript
-" Bundle 'drslump/vim-syntax-js'
+Bundle 'drslump/vim-syntax-js'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'itspriddle/vim-jquery'
@@ -64,22 +64,28 @@ Bundle 'dag/vim2hs'
 " Erlang
 Bundle 'jimenezrick/vimerl'
 
-" Html, Xml, Css, Markdown...
+" Html
+Bundle 'mattn/emmet-vim'
+
+" Css, less, sass.
 Bundle 'skammer/vim-css-color'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'cakebaker/scss-syntax.vim'
 
+" Markdown
 Bundle 'tpope/vim-markdown'
 Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'nelstrom/vim-markdown-preview'
 " Bundle 'skwp/vim-html-escape'
 " Bundle 'timcharper/textile.vim'
+
+" Jsx
 Bundle 'mxw/vim-jsx'
 
 " Git related...
-Bundle 'gregsexton/gitv'
+" Bundle 'gregsexton/gitv'
 Bundle 'mattn/gist-vim'
 " Bundle 'skwp/vim-git-grep-rails-partial'
 " Bundle 'tjennings/git-grep-vim'
@@ -104,7 +110,6 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'honza/vim-snippets'
 
 Bundle 'godlygeek/tabular'
-Bundle 'mattn/emmet-vim'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'svermeulen/vim-easyclip'
 Bundle 'bkad/CamelCaseMotion'
