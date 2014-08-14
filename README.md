@@ -1,18 +1,8 @@
 thats my dotfiles
 
-todo: 
-
-try this https://github.com/hchbaw/auto-fu.zsh, 
-finish the fucking installer rake tasks, 
-find a way to install gems (btw ask a user if he/she wants to install a particular gem)
+todo:
 
 don't forget to install the silver searcher: https://github.com/ggreer/the_silver_searcher
 airline/powerline is to slow (on mac) so i've replaced it with lightline
 
-required (not really) gems:
-gem install pry
-gem install pry-rails
-gem install awesome_print
-gem install hirb
-gem install hirb-unicode
-gem install pry-theme
+npm install -g http-server gulp bower grunt karma coffeegulp jshint js-yaml jsxhint eslint jsonlint react-tools
