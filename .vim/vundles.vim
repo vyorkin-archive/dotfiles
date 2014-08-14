@@ -34,6 +34,7 @@ Bundle 'tpope/vim-heroku'
 Bundle 'tpope/vim-rbenv'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sunaku/vim-ruby-minitest'
+Bundle 'skalnik/vim-vroom'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'amdt/vim-niji'
 
@@ -92,12 +93,14 @@ Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/git-bump'
+Bundle 'mmozuras/vim-github-comment'
 Bundle 'mhinz/vim-signify'
 
 Bundle 'godlygeek/csapprox'
 
 " General text editing improvements...
 " Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'terryma/vim-expand-region'
 Bundle 'scrooloose/syntastic'
 Bundle 'Raimondi/delimitMate'
 
@@ -121,6 +124,8 @@ Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'nelstrom/vim-visual-star-search'
 
 " General vim improvements
+Bundle 'tpope/vim-rsi'
+Bundle 'tpope/vim-sleuth'
 Bundle 'vim-scripts/vim-auto-save'
 
 " Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -163,6 +168,9 @@ Bundle 'tpope/vim-scriptease'
 " Bundle 'vim-scripts/AutoTag'
 " Bundle 'vim-scripts/lastpos.vim'
 " Bundle 'vim-scripts/sudo.vim'
+
+Bundle 'mattn/webapi-vim'
+
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
 
@@ -201,7 +209,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 
 " Bundle 'benmills/vimux'
-" Bundle 'jgdavey/tslime.vim'
+Bundle 'jgdavey/tslime.vim'
 " Bundle 'rizzatti/funcoo.vim'
 " Bundle 'rizzatti/dash.vim'
 

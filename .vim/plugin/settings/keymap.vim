@@ -2,6 +2,15 @@
 " General vim sanity improvements
 " ========================================
 
+" stop that stupid window from popping up
+map q: :q
+
+" save a file, a lot faster than :w + <Enter>
+nnoremap <Leader>w :w<CR>
+
+" enter visual line mode with <leader><leader>
+nmap <Leader><Leader> V
+
 " format the entire file
 nnoremap <leader>fef :normal! gg=G``<CR>
 
