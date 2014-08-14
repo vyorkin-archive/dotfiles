@@ -15,7 +15,7 @@ set autowriteall
 set lazyredraw                  "Don't redraw while in macros
 set cole=1                      "Enable conceal
 set conceallevel=2
-set concealcursor=nc            "Don't reveal the conceals unless on insert or visual modes
+" set concealcursor=nc            "Don't reveal the conceals unless on insert or visual modes
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -27,7 +27,7 @@ syntax on
 
 " The mapleader has to be set
 " before vundle starts loading all the plugins.
-let mapleader=","
+let mapleader="\<Space>"
 
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundle.vim
