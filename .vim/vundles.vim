@@ -45,6 +45,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'jeroenbourgois/vim-actionscript'
+Bundle 'mtscout6/vim-cjsx'
 Bundle 'marijnh/tern_for_vim'
 
 " Clojure
