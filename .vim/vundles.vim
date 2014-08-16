@@ -36,7 +36,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'skalnik/vim-vroom'
 Bundle 'vim-scripts/paredit.vim'
-Bundle 'amdt/vim-niji'
+" Bundle 'rking/pry-de'
 
 " Javascript, coffeescript, actionscript
 Bundle 'drslump/vim-syntax-js'
@@ -55,6 +55,7 @@ Bundle 'tpope/vim-classpath'
 
 Bundle 'guns/vim-clojure-static'
 Bundle 'guns/vim-clojure-highlight'
+Bundle 'amdt/vim-niji'
 
 " Go
 Bundle 'fatih/vim-go'
@@ -99,7 +100,7 @@ Bundle 'mhinz/vim-signify'
 Bundle 'godlygeek/csapprox'
 
 " General text editing improvements...
-" Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'terryma/vim-expand-region'
 Bundle 'scrooloose/syntastic'
 Bundle 'Raimondi/delimitMate'
@@ -116,7 +117,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'svermeulen/vim-easyclip'
 Bundle 'bkad/CamelCaseMotion'
-Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'Lokaltog/vim-easymotion'
 Bundle 'goldfeld/vim-seek'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'terryma/vim-multiple-cursors'

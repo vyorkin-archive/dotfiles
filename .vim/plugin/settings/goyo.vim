@@ -1,4 +1,4 @@
-nnoremap <Leader><Space> :Goyo<CR>
+nnoremap <Leader>f :Goyo<CR>
 
 let g:goyo_width = 100
 
