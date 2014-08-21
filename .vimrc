@@ -109,10 +109,11 @@ if has("gui_running")
   " (the numbers don't show up) so I made it a VimEnter event
   autocmd VimEnter * set guitablabel=%N:\ %t\ %M
 
-  set lines=72
-  set columns=200
+  set lines=42
+  set columns=100
 
-  set guifont=Menlo:h12
+  set guifont=Menlo:h11
+  set transparency=10
 
   " set fuopt+=maxhorz
   " set fu
