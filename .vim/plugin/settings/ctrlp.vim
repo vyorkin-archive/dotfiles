@@ -5,6 +5,8 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-
 " controller
 " let g:ctrlp_by_filename = 1
 let g:ctrlp_use_caching = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_clear_cache_on_exit = 0
 
 " We don't want to use Ctrl-p as the mapping because
 " it interferes with YankRing (paste, then hit ctrl-p)
