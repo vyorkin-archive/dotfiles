@@ -81,6 +81,7 @@ namespace :install do
         git clone https://github.com/tpope/rbenv-communal-gems.git
         git clone https://github.com/tpope/rbenv-aliases.git
         git clone https://github.com/mislav/rbenv-user-gems.git
+        git clone https://github.com/rkh/rbenv-whatis.git
       `
   end
 end
@@ -165,6 +166,13 @@ namespace :darwin do
         w3m links rbenv ruby-build
       )
       `brew install #{packages.join(' ')}`
+
+      quick_look_plugins = %w(
+        qlcolorcode qlstephen qlmarkdown quicklook-json
+        qlprettypatch quicklook-csv betterzipql
+        webp-quicklook suspicious-package
+      )
+      `brew cask install #{quick_look_plugins.join(' ')}`
       puts
     end
   end
