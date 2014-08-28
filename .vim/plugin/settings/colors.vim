@@ -72,3 +72,4 @@ endif
 
 " Make sure this file loads itself on top of any other color settings
 au VimEnter * so ~/.vim/plugin/settings/colors.vim
+au ColorScheme * so ~/.vim/plugin/settings/colors.vim

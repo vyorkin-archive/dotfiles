@@ -19,6 +19,7 @@ function! GoyoAfter()
     silent !tmux set status on
   endif
 
+  so ~/.vim/plugin/settings/colors.vim
   silent! set number
   silent! SignifyToggle
   silent! NERDTreeClose
