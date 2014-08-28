@@ -34,7 +34,7 @@ namespace :install do
       gem-ctags ghi pry pry-remote pry-doc pry-git awesome_print sketches hirb
       hirb-unicode coolline rubocop pry-coolline
       pry-rails pry-theme coderay pry-rescue gist jist interactive_editor
-      foreman
+      foreman ruby-lint haml-lint
     )
 
     `gem i gas gas_stats --backtrace`
