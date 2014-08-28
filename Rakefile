@@ -108,7 +108,7 @@ namespace :darwin do
     `which brew`
     run 'darwin:homebrew:install' unless $?.success?
     %w(update install_packages).each { |t| run "darwin:homebrew:#{t}" }
-    %w(pow install_fonts install_iterm_themes).each { |t| run "darwin:#{t}" }
+    %w(install_pow install_fonts install_iterm_themes).each { |t| run "darwin:#{t}" }
   end
 
   desc 'Install POW'
@@ -184,7 +184,7 @@ namespace :symlink do
     %w(
       bash ruby infrastructure git zsh tmux
       vim oh_my_zsh dotsecrets rbenv dotpryrc
-      pryrc zsh_pure mutt weechat pow nodejs
+      pryrc zsh_pure mutt weechat nodejs
     ).each { |t| run "symlink:#{t}" }
   end
 
