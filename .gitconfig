@@ -113,7 +113,7 @@
 [core]
   autocrlf = false
   excludesfile = /Users/vyorkin/.gitignore
-  editor = vi
+  editor = vim
 [advice]
   statusHints = false
 [apply]
