@@ -163,7 +163,7 @@ namespace :darwin do
       packages = %w(
         zsh ctags git hub tmux reattach-to-user-namespace
         the_silver_searcher fasd git-flow git-extras autoenv watch
-        w3m links rbenv ruby-build
+        w3m links tree rbenv ruby-build
       )
       `brew install #{packages.join(' ')}`
 
