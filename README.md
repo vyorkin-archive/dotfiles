@@ -1,4 +1,6 @@
-thats my dotfiles
+## ABANDONED, NOT MAINTAINED, DEPRECATED, FORGOTTEN & LOST FOREVER & EVER
+
+thats my OLD dotfiles
 
 todo:
 
